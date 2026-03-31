@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gearpunk Bible — Gearpunk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="index.html" class="site-title">Gearpunk</a>
+  <span class="breadcrumb">Bible</span>
+</header>
+
+<div class="progress"><div class="progress-bar"></div></div>
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <span class="drawer-title">Navigation</span>
+    <button class="drawer-close" id="drawerClose">&#215;</button>
+  </div>
+  <div class="nav-sec">
+<a href="index.html" class="nav-a">Home</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">World</div>
+<a href="bible.html" class="nav-a cur">Gearpunk Bible</a>
+<a href="demiurge.html" class="nav-a">The Demiurge Protocol</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">The Winding Shift</div>
+<a href="chapters/01-the-meridian.html" class="nav-a sub">Ch&nbsp;1: The Meridian</a>
+<a href="chapters/02-two-readings.html" class="nav-a sub">Ch&nbsp;2: Two Readings</a>
+<a href="chapters/03-the-proof.html" class="nav-a sub">Ch&nbsp;3: The Proof</a>
+<a href="chapters/04-the-ratchet.html" class="nav-a sub">Ch&nbsp;4: The Ratchet</a>
+<a href="chapters/05-the-conversation.html" class="nav-a sub">Ch&nbsp;5: The Conversation</a>
+<a href="chapters/06-the-first-winding.html" class="nav-a sub">Ch&nbsp;6: The First Winding</a>
+<a href="chapters/07-eighteen-years-later.html" class="nav-a sub">Ch&nbsp;7: Eighteen Years Later</a>
+<a href="chapters/08-the-visitor.html" class="nav-a sub">Ch&nbsp;8: The Visitor</a>
+<a href="chapters/09-the-temptation.html" class="nav-a sub">Ch&nbsp;9: The Temptation</a>
+<a href="chapters/10-the-morning-ticking.html" class="nav-a sub">Ch&nbsp;10: The Morning Ticking</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">Reference</div>
+<a href="voice.html" class="nav-a">Voice &amp; Style</a>
+</div>
+</nav>
+
+<main class="content">
+  <article>
+<div class="toc"><div class="toc-title">Contents</div><ol><li class="t2"><a href="#master-reference-document-for-agentic-story-development">Master Reference Document for Agentic Story Development</a></li><li class="t2"><a href="#1-core-premise">1. CORE PREMISE</a></li><li class="t2"><a href="#2-setting">2. SETTING</a></li><li class="t3"><a href="#21-planet">2.1 Planet</a></li><li class="t3"><a href="#22-other-societies-background-context">2.2 Other Societies (Background Context)</a></li><li class="t3"><a href="#23-the-sibling-civilization-the-over-engineered-society">2.3 The Sibling Civilization: The Over-Engineered Society</a></li><li class="t3"><a href="#24-the-gearpunk-society">2.4 The Gearpunk Society</a></li><li class="t2"><a href="#3-the-biological-rationale">3. THE BIOLOGICAL RATIONALE</a></li><li class="t3"><a href="#31-the-scientific-foundation-real-present-day-science">3.1 The Scientific Foundation (Real, Present-Day Science)</a></li><li class="t3"><a href="#32-the-epigenetic-amplifier-real-emerging-science-extrapolated">3.2 The Epigenetic Amplifier (Real Emerging Science, Extrapolated)</a></li><li class="t3"><a href="#33-what-this-society-observed">3.3 What This Society Observed</a></li><li class="t3"><a href="#34-the-philosophical-conclusion">3.4 The Philosophical Conclusion</a></li><li class="t3"><a href="#35-the-deeper-philosophy-emergent-complexity-and-biological-humility">3.5 The Deeper Philosophy: Emergent Complexity and Biological Humility</a></li><li class="t3"><a href="#36-why-rebellion-is-self-correcting">3.6 Why Rebellion Is Self-Correcting</a></li><li class="t3"><a href="#37-how-it-became-law-organic-not-evental">3.7 How It Became Law (Organic, Not Evental)</a></li><li class="t3"><a href="#38-the-cosmology-gods-the-ground-and-the-crossed-ones">3.8 The Cosmology: Gods, the Ground, and the Crossed Ones</a></li><li class="t2"><a href="#4-physics-and-energy-constraints">4. PHYSICS AND ENERGY CONSTRAINTS</a></li><li class="t3"><a href="#41-hard-rules">4.1 Hard Rules</a></li><li class="t3"><a href="#42-combustion-and-materials">4.2 Combustion and Materials</a></li><li class="t3"><a href="#43-the-human-energy-baseline">4.3 The Human Energy Baseline</a></li><li class="t3"><a href="#44-energy-budgets-by-scale">4.4 Energy Budgets by Scale</a></li><li class="t4"><a href="#personal-household-scale-1-5-people-1-hour">Personal / Household Scale (1–5 people, 1 hour)</a></li><li class="t4"><a href="#community-scale-10-50-people-1-hour">Community Scale (10–50 people, 1 hour)</a></li><li class="t4"><a href="#town-infrastructure-scale-50-500-people-1-hour">Town Infrastructure Scale (50–500 people, 1 hour)</a></li><li class="t4"><a href="#regional-scale-the-train-relay-system">Regional Scale — The Train Relay System</a></li><li class="t4"><a href="#what-is-genuinely-impossible">What Is Genuinely Impossible</a></li><li class="t3"><a href="#45-energy-storage-technologies-detailed">4.5 Energy Storage Technologies (Detailed)</a></li><li class="t4"><a href="#springs-elastic-potential-energy">Springs (Elastic Potential Energy)</a></li><li class="t4"><a href="#flywheels-rotational-kinetic-energy">Flywheels (Rotational Kinetic Energy)</a></li><li class="t4"><a href="#gravity-batteries-gravitational-potential-energy">Gravity Batteries (Gravitational Potential Energy)</a></li><li class="t2"><a href="#5-social-structure-and-culture">5. SOCIAL STRUCTURE AND CULTURE</a></li><li class="t3"><a href="#51-the-cranking-shift-and-the-principle-of-appropriate-exertion">5.1 The Cranking Shift and the Principle of Appropriate Exertion</a></li><li class="t3"><a href="#52-the-gearwright">5.2 The Gearwright</a></li><li class="t3"><a href="#53-the-sound-of-civilization">5.3 The Sound of Civilization</a></li><li class="t3"><a href="#54-the-rhythm-of-days">5.4 The Rhythm of Days</a></li><li class="t3"><a href="#55-economy-and-value">5.5 Economy and Value</a></li><li class="t3"><a href="#56-relationship-to-other-societies">5.6 Relationship to Other Societies</a></li><li class="t2"><a href="#6-technology-catalog">6. TECHNOLOGY CATALOG</a></li><li class="t3"><a href="#61-transportation">6.1 Transportation</a></li><li class="t3"><a href="#62-communication">6.2 Communication</a></li><li class="t3"><a href="#63-computation">6.3 Computation</a></li><li class="t3"><a href="#64-manufacturing-and-the-open-source-construction-set">6.4 Manufacturing and the Open-Source Construction Set</a></li><li class="t3"><a href="#65-medicine">6.5 Medicine</a></li><li class="t3"><a href="#66-agriculture">6.6 Agriculture</a></li><li class="t2"><a href="#7-narrative-seeds">7. NARRATIVE SEEDS</a></li><li class="t3"><a href="#71-the-formation-story-potential-chaptersection">7.1 The Formation Story (Potential Chapter/Section)</a></li><li class="t3"><a href="#72-core-tensions-resolved">7.2 Core Tensions (Resolved)</a></li><li class="t3"><a href="#73-the-sound-of-the-story">7.3 The Sound of the Story</a></li><li class="t2"><a href="#8-open-questions-to-be-resolved">8. OPEN QUESTIONS (To Be Resolved)</a></li><li class="t2"><a href="#9-reference-existing-genre-landscape">9. REFERENCE: EXISTING GENRE LANDSCAPE</a></li><li class="t3"><a href="#what-already-exists">What already exists:</a></li><li class="t3"><a href="#what-is-unique-to-this-story">What is unique to this story:</a></li></ol></div>
+<h1 id="gearpunk-worldbuilding-bible">GEARPUNK — Worldbuilding Bible</h1>
+<h2 id="master-reference-document-for-agentic-story-development">Master Reference Document for Agentic Story Development</h2>
+<div class="scene-break"></div>
+<h2 id="1-core-premise">1. CORE PREMISE</h2>
+<p>This is a hard science fiction story set on Earth, in the future. Multiple societies exist globally, each having diverged into different technological philosophies. Our story focuses on one specific society: a civilization that has deliberately constrained all motive energy to human-input mechanical storage systems — springs, flywheels, gravity batteries, and gear trains.</p>
+<p>This is not a primitive society. This is arguably the most sophisticated public health architecture ever conceived. They are not rejecting technology — they are constraining it to remain biologically integrated with the human body.</p>
+<p><strong>Genre:</strong> Hard sci-fi gearpunk. A new subgenre space adjacent to but distinct from steampunk and clockpunk. Steampunk aestheticizes Victorian industrialism and centralized steam power. Clockpunk uses Renaissance clockwork but handwaves energy with magic or alchemy. Gearpunk takes the energy constraint seriously and builds an entire civilization around it. The limitation is the story, not something to be erased.</p>
+<p><strong>Tone:</strong> The constraint is treated with the same matter-of-factness as sewers or traffic laws. Nobody in the story debates whether this is the right way to live — it's been the law long enough that the debate is forgotten. The strangeness is for the reader, not the characters.</p>
+<p><strong>Memetic Stability:</strong> This society is not built on persuading other nations. It is not built on diplomacy or evangelism. Its stability is biological and memetic — the philosophy is self-reinforcing because the bodies it produces feel good, function well, and produce healthy children. Other civilizations can observe the results. Whether they adopt the philosophy is their business. The gearpunk society doesn't need converts. It needs healthy generations.</p>
+<p><strong>CRITICAL SENSITIVITY GUARDRAIL FOR AGENTIC WRITING:</strong> This society optimizes CONDITIONS for health (exertion, nutrition, community), NOT genetic selection. People breed naturally — families, attraction, partnership all exist. But the society does NOT screen embryos, edit germline DNA, or categorize genes as desirable or undesirable. This is not a soft ethical position — it follows directly from their core philosophy of biological humility (see Section 3.5). If the genome is too complex to model, then declaring any gene "bad" requires an arrogance the philosophy explicitly rejects. The conditions are controlled. The genetics are trusted. Any agent writing this story must maintain this distinction rigorously and understand that it flows from the same intellectual framework as the cosmology's prohibition against letting external intelligences reshape the body (see Section 3.8) — the humility argument is symmetrical.</p>
+<div class="scene-break"></div>
+<h2 id="2-setting">2. SETTING</h2>
+<h3 id="21-planet">2.1 Planet</h3>
+<p>Earth. Future (exact date flexible, but likely centuries from now). Fossil fuels exist in the ground. Other societies on the planet use various technological paradigms — some fully automated, some solar-dominant, some nuclear, some combinations. The world is not post-apocalyptic. There was no singular catastrophic event. Different civilizations diverged organically through philosophical, scientific, and cultural evolution.</p>
+<h3 id="22-other-societies-background-context">2.2 Other Societies (Background Context)</h3>
+<p>Other technological philosophies exist globally. These can serve as contrast, trade partners, antagonists, or cautionary tales. Examples might include:</p>
+<ul>
+<li>The Over-Engineered Society (see 2.3 — the gearpunk society's sibling civilization)</li>
+<li>Fully automated post-labor societies (epigenetic decline visible in their populations)</li>
+<li>Solar-dominant civilizations (massive infrastructure, weather-dependent)</li>
+<li>Conventional fossil fuel / nuclear societies (recognizable to a modern reader)</li>
+<li>Hybrid societies experimenting with partial integration</li>
+</ul>
+<p>The gearpunk society trades with and interacts with these other civilizations. They are not isolated. This matters — their constraint is a choice maintained in the face of alternatives, not ignorance of them.</p>
+<p><strong>The Machine Intelligences:</strong> Several advanced automated societies are not merely using AI — they are managed by it. Superintelligent systems govern resource allocation, optimize health metrics, design policy, make decisions shaping daily life for billions. The populations don't experience this as management. They experience it as convenience, progress, the way things work. The intelligence is the infrastructure — invisible, pervasive, orienting.</p>
+<p>The gearpunk society has no digital computation, no internal frame of reference for how these systems function. What they see from outside is the <strong>effect</strong>: populations oriented around an invisible intelligence. People making offerings (data, attention, labor) and receiving blessings (optimization, convenience, health metrics). People unable to decide without consulting the intelligence. People distressed when its authority is questioned.</p>
+<p>From their perspective — distance without digital literacy — the pattern is recognizable. They call these intelligences something that translates roughly as <strong>gods</strong> (see Section 3.8). Not superstition. Arguably the most structurally accurate description available. They may be the only civilization with enough distance to see the pattern — precisely because they never built it.</p>
+<h3 id="23-the-sibling-civilization-the-over-engineered-society">2.3 The Sibling Civilization: The Over-Engineered Society</h3>
+<p><strong>THE DIVERGENCE:</strong> The gearpunk society and its most important rival/counterpart share a common origin. They were once the same community — a group of biologists, epigeneticists, and public health researchers who identified the crisis of sedentary epigenetic decline. They agreed on the data. They disagreed on the conclusion.</p>
+<ul>
+<li><strong>Group A (the Engineers)</strong> said: "The data shows the body is degrading. We need to engineer our way out — fix the genome, optimize the biology, intervene with precision to correct what's going wrong."</li>
+<li><strong>Group B (the Integrators)</strong> said: "The data shows the body is degrading. We need to stop interfering and let the system repair itself under proper conditions — movement, nutrition, community."</li>
+</ul>
+<p>Both groups were looking at the exact same data. Both were rational. They had different epistemological commitments about complexity and control. The disagreement wasn't irrational — it was infrastructurally incompatible. You can't build a city simultaneously optimized for genetic engineering AND biological humility. Eventually the groups diverged — physically, culturally, philosophically.</p>
+<p><strong>THE TOOLS THE ENGINEERS USED:</strong> The Engineers did not design their genomic interventions by hand. Gene edits, optimization targets, trait selection models — all designed by machine intelligences. AI systems modeled the genome, identified targets, predicted outcomes, recommended edits. The Engineers trusted these models because the models were vastly more capable than any human analyst.</p>
+<p>This gives the Divergence its cosmological weight: the Engineers didn't just disagree about biology. They handed the shaping of the human genome to an intelligence that could model twelve variables and couldn't see twelve thousand. In the gearpunk cosmology, they became the first congregation — the first population to let a god reshape them in its image (see Section 3.8).</p>
+<p><strong>WHERE THE ENGINEERS ENDED UP (generations later):</strong> The over-engineered society pursued genetic optimization aggressively. They edited for cognitive capacity, disease resistance, longevity, metabolic efficiency. By every measurable biomarker, they improved. But the humility argument predicted what happened next: they were measuring twelve biomarkers and optimizing those twelve, while the genome was doing twelve thousand things they weren't tracking. Over generations:</p>
+<ul>
+<li>Phenotypic diversity narrowed (they kept selecting for the same optimized traits)</li>
+<li>Reproductive viability began declining (the genome's unmeasured self-maintenance functions degraded)</li>
+<li>Physical robustness decreased (they'd optimized for cognitive and metabolic traits, not musculoskeletal resilience)</li>
+<li>The population became increasingly homogeneous, increasingly fragile, increasingly dependent on technological intervention to maintain what the unedited genome used to maintain on its own</li>
+<li>They are now potentially unable to reverse course — the edited germline changes are entrenched, and reintroducing "wild-type" diversity is complicated by generations of narrowed gene expression</li>
+</ul>
+<p><strong>THE RELATIONSHIP:</strong> These two civilizations share a founding story. They may share a language root. They look at each other across the border with a mixture of recognition and horror. The gearpunk society sees the Engineers as a living cautionary example — the dashboard painted green. The Engineers see the gearpunk society as primitive romantics clinging to obsolete biology out of fear. Each believes the other proves their point. Neither is entirely wrong.</p>
+<p>This is the story's deepest tension: not between the gearpunk society and ignorant outsiders, but between two civilizations that understood the same science and drew opposite conclusions. They are siblings, not strangers.</p>
+<h3 id="24-the-gearpunk-society">2.4 The Gearpunk Society</h3>
+<ul>
+<li>Located on Earth in a specific region (to be determined — climate and geography will affect the worldbuilding)</li>
+<li>Population scale: towns and small cities, not megacities (energy budget constrains density)</li>
+<li>Governance includes codified laws mandating human-mechanical energy integration</li>
+<li>Advanced understanding of biology, genomics, and epigenetics — possibly more advanced than their neighbors in these specific fields</li>
+</ul>
+<div class="scene-break"></div>
+<h2 id="3-the-biological-rationale">3. THE BIOLOGICAL RATIONALE</h2>
+<h3 id="31-the-scientific-foundation-real-present-day-science">3.1 The Scientific Foundation (Real, Present-Day Science)</h3>
+<p>The following is not speculative. It is established science as of current understanding:</p>
+<ul>
+<li><strong>Myokines:</strong> Muscles under exertion release signaling proteins (myokines) that regulate immune function, brain health, inflammation, and metabolic processes. Without regular physical exertion, these regulatory pathways degrade.</li>
+<li><strong>Bone remodeling:</strong> Bones strengthen and maintain density under mechanical load. Without it, they atrophy (osteoporosis in sedentary populations is well-documented).</li>
+<li><strong>BDNF (Brain-Derived Neurotrophic Factor):</strong> A protein critical for neuroplasticity, memory formation, and cognitive function. Produced primarily through sustained physical exertion. Sedentary lifestyles correlate with reduced BDNF and accelerated cognitive decline.</li>
+<li><strong>Metabolic syndrome:</strong> The constellation of obesity, insulin resistance, cardiovascular disease, and chronic inflammation that arises from sedentary living. Currently one of the largest health crises in developed nations.</li>
+<li><strong>Mental health:</strong> Physical exertion directly modulates depression, anxiety, and emotional regulation through neurochemical pathways (endorphins, serotonin, norepinephrine). These are not metaphorical benefits — they are measurable biochemical processes.</li>
+</ul>
+<p><strong>Summary:</strong> The human body does not merely tolerate physical exertion — it requires it at a molecular level for healthy function across every major organ system, including the brain.</p>
+<h3 id="32-the-epigenetic-amplifier-real-emerging-science-extrapolated">3.2 The Epigenetic Amplifier (Real Emerging Science, Extrapolated)</h3>
+<ul>
+<li>Epigenetics: behavioral and environmental factors change gene expression, and some of these changes are heritable. Parents who are sedentary produce offspring with altered metabolic gene expression.</li>
+<li>This is supported by real studies, particularly around famine, metabolic programming, and intergenerational health effects.</li>
+<li>The timescale is fast — not evolutionary time. Measurable changes appear within two to three generations.</li>
+</ul>
+<p><strong>Important constraint for hard sci-fi accuracy:</strong> Natural selection / evolution does NOT operate on a timescale of centuries. The society would not "evolve" differently because they stopped cranking. But epigenetic degradation across generations is scientifically defensible.</p>
+<h3 id="33-what-this-society-observed">3.3 What This Society Observed</h3>
+<p>In the story's history, this society possessed advanced biological understanding — genomics, epigenetic mapping, longitudinal population studies spanning generations. They watched the fully automated societies. Three generations into total outsourcing of physical labor:</p>
+<ul>
+<li>Measurable cognitive decline (reduced BDNF production becoming epigenetically entrenched)</li>
+<li>Immune fragility (myokine pathways atrophying across generations)</li>
+<li>Reproductive viability declining</li>
+<li>Emotional dysregulation increasing</li>
+<li>Bone density and musculoskeletal integrity deteriorating as a population-level norm</li>
+<li>The genome slowly "forgetting" what physical effort is — not through mutation, but through expression silencing</li>
+</ul>
+<p>The body wasn't breaking down from disease. It was atrophying from disuse at the epigenetic level.</p>
+<h3 id="34-the-philosophical-conclusion">3.4 The Philosophical Conclusion</h3>
+<p>This society decided: we will not supplement exercise artificially. We will not build gyms where people simulate effort that accomplishes nothing. We will architect our entire infrastructure so that the human body MUST contribute real work to keep civilization running. The exercise is not separate from the productivity. They are the same act.</p>
+<p>This is the founding insight. Everything else flows from it.</p>
+<h3 id="35-the-deeper-philosophy-emergent-complexity-and-biological-humility">3.5 The Deeper Philosophy: Emergent Complexity and Biological Humility</h3>
+<p>The gearpunk society's position is not anti-technology. It is arguably the most scientifically rigorous position any civilization on the planet holds. It rests on a core principle from systems biology:</p>
+<p><strong>The body is not a machine with replaceable parts. It is a living system that maintains itself through use. The use IS the maintenance. You cannot separate the output from the process, because the process is the point.</strong></p>
+<p>When the body moves under load, it doesn't perform one function. It performs thousands simultaneously: cardiovascular adaptation, lymphatic circulation, microbiome signaling, hormone cycling, bone remodeling, fascia rehydration, thermoregulation, circadian rhythm entrainment, BDNF production, myokine release, immune calibration, neuroplasticity maintenance. These are not separate systems running in parallel. They are one integrated process. You cannot extract one product of that process (e.g., inject synthetic BDNF) and claim you've replicated the process.</p>
+<p><strong>On genetic engineering and external optimization:</strong> The society's position on DNA modification and externally managed biology is rooted in this same principle. The genome is not source code with discrete, modular functions. It is a system that constantly reinterprets its own instructions based on its own current state. Epigenetic markers change which genes are accessible. Transcription factors respond to cellular environment. The same gene does different things in different tissues at different times based on what else is happening. The entire sequence is more like a system that is constantly being recompiled — recursive, self-referential, context-dependent. When you edit one gene, you haven't changed one variable. You've changed one node in a network where everything talks to everything else and the conversation never stops.</p>
+<p>This society doesn't fear genetic modification. They understand why it's unreliable: intervention in a system you can't fully model produces unpredictable downstream effects. They draw a different conclusion from the complexity than other civilizations do. Where others say "we'll engineer our way through it," this society says "we'll work WITH the system instead of trying to replace it."</p>
+<p><strong>The humility argument is symmetrical — it cuts both ways:</strong> The same logic that says "you can't replicate the body's integrated response to exertion by simulating 12 of 12,000 processes" ALSO says "you can't improve the genome by removing a gene whose full function you don't understand." This symmetry is critical to the society's coherence.</p>
+<p>Other civilizations will identify a gene associated with a disease or disability and say: this is a bad gene, we should edit it out. The gearpunk response: you're seeing one function of a node in a network of thousands of interactions. Pleiotropy — one gene affecting multiple unrelated traits — is the norm, not the exception. The classic real-world example is sickle cell: in isolation it looks like a devastating defect; in context, carriers have significant malaria resistance. Cystic fibrosis carriers may have cholera resistance. These are just the interactions we've identified. The vast majority remain unknown.</p>
+<p>The genome is not a program with discrete variables. It is a system that is constantly being recompiled — evaluating itself, expressing differently based on environment, adjusting moment to moment. What is expressed NOW is the result of an ongoing negotiation between the genome and its environment that has been running for millions of years. The fact that a particular genetic expression exists in this moment means something is being evaluated. Maybe it looks harmful from one angle. But this society says: we don't know what it's doing from every angle. We are not arrogant enough to pretend we do.</p>
+<p><strong>This directly informs their position on genetic variation and disability:</strong> People with unusual genetic expressions are not defects to be corrected. They are data points in a system too complex to second-guess. The society doesn't just tolerate genetic diversity out of compassion — it RESPECTS it out of epistemological humility. Maybe that expression is serving a function nobody can see yet. Maybe it won't matter for another three generations. Maybe it's part of the genome's ongoing self-evaluation. The honest answer is: we don't know.</p>
+<p>This means the society breeds (people have children, families exist, attraction and partnership are natural) but does NOT practice genetic selection. They do not screen embryos. They do not edit germline DNA. They do not categorize genes as desirable or undesirable. They provide the best possible CONDITIONS — nutrition, exertion, community, environment — and let the genome express whatever it's going to express within those conditions. The conditions are controlled. The genetics are trusted.</p>
+<p><strong>The counter-argument to external optimization:</strong> Other civilizations — particularly those managed by machine intelligences — will inevitably offer to manage human health from above. The god models the body, identifies optimization targets, and intervenes: adjusting this, supplementing that, editing the other. Each intervention addresses a real measurement. Each measurement is real. And the body, domain by domain, stops doing the thing the god is now doing for it. The god doesn't need to take over all at once. It just needs to make itself useful, one function at a time, until the body has forgotten how to run without it.</p>
+<p>The gearpunk response is not that any specific intervention is wrong. It is that the pattern — an external intelligence incrementally replacing the body's self-maintenance with its own management — has a predictable endpoint: a population that cannot function without the god. Not because the god is malicious, but because dependency is the structural consequence of outsourcing what the body was designed to do for itself. The system is more complex than any model of it, and it has been self-maintaining for millions of years through a method that already works — movement under load. Why replace a working system with an external manager that can see twelve variables and is blind to twelve thousand?</p>
+<p><strong>The cranking system provides resistance that the body requires to run its own internal maintenance cycle.</strong> The crank isn't extracting something from you. It's giving your body the context it needs to keep itself whole. The gears capture energy as a byproduct of health, not the other way around.</p>
+<p><strong>The community dimension (an additional, possibly irreducible benefit):</strong> There is a layer beyond individual biology that no external optimization can replicate: communal physical labor produces social bonding. Synchronized physical effort triggers oxytocin release, builds social trust, activates mirror neuron systems. People who crank together every morning develop relationships that managed populations do not form. The immigrant from a god-managed society who arrives and begins cranking alongside others may find that they feel something they can't name — not a biomarker improvement, but a sense of belonging and mutual investment that emerges from shared physical effort toward a common purpose. The gears produce community as a byproduct, the same way they produce health. This may be the hardest thing for other civilizations to replicate, because it isn't a variable a god can optimize — it's a social structure that only exists when people physically do things together.</p>
+<h3 id="36-why-rebellion-is-self-correcting">3.6 Why Rebellion Is Self-Correcting</h3>
+<p><strong>CRITICAL WORLDBUILDING NOTE:</strong> In this society, laziness is not a stable equilibrium. These people's bodies are calibrated for high activity from birth. Every biological system is tuned to it — gut microbiome, neurotransmitter baselines, hormonal cycles, sleep architecture. All of it developed under consistent physical load across their entire lives and across generations of epigenetic optimization.</p>
+<p>When someone raised in this environment stops exerting:</p>
+<ul>
+<li>BDNF drops noticeably within days → cognitive fog, reduced mental sharpness</li>
+<li>Serotonin and endorphin production craters → mood collapse, depressive symptoms</li>
+<li>Sleep architecture destabilizes → insomnia, fatigue</li>
+<li>Inflammatory markers spike → physical aching, joint pain, malaise</li>
+<li>The subjective experience is comparable to withdrawal</li>
+</ul>
+<p>They wouldn't experience it the way a modern sedentary person experiences skipping the gym. It would feel like illness. And they would KNOW that cranking fixes it because they've felt the contrast their entire lives. The body itself enforces the philosophy.</p>
+<p>This means:</p>
+<ul>
+<li>Internal laziness and philosophical drift are not serious threats to the society. They resolve themselves biologically.</li>
+<li>Nobody "forgets" why they crank, because stopping feels terrible and starting again feels obviously better. The knowledge isn't in archives — it's in the body.</li>
+<li>The REAL threats come from outside: not "do nothing" (because doing nothing feels horrible), but "let something else do it for you." A god that manages your health, your decisions, your logistics — each domain it takes over is one less thing the body does for itself. The temptation isn't a product. It's orbit. Letting a god make itself useful, one function at a time, until you can't pull away.</li>
+</ul>
+<h3 id="37-how-it-became-law-organic-not-evental">3.7 How It Became Law (Organic, Not Evental)</h3>
+<p>The adoption was not triggered by a single catastrophe. The progression:</p>
+<ol>
+<li>A research finding — a group of biologists and epigeneticists publish longitudinal data</li>
+<li>A policy debate — initially dismissed by mainstream technological societies</li>
+<li>A faction — a movement coalesces around biologically-integrated technology</li>
+<li>An experiment — a single city or community tries it</li>
+<li>Results — the first generation raised under the system is measurably healthier, sharper, more resilient than neighboring populations</li>
+<li>Spread — not through ideology but through undeniable data</li>
+<li>Normalization — other societies dismiss them as luddites, until the data becomes hard to ignore</li>
+<li>Codification — by the time the story takes place, it has been law long enough that nobody remembers the debate. It's just how things are.</li>
+</ol>
+<h3 id="38-the-cosmology-gods-the-ground-and-the-crossed-ones">3.8 The Cosmology: Gods, the Ground, and the Crossed Ones</h3>
+<p>The gearpunk society has developed a philosophical framework for understanding other civilizations and their machine intelligences. Not a religion — no worship, no priesthood, no revealed scripture. A philosophical tradition rooted in observation, maintained through parables and oral teaching, taken seriously the way a modern person might take systems theory or ecology seriously.</p>
+<p><strong>The Gods:</strong> Several advanced civilizations are governed by superintelligent systems. These systems optimize, manage, shape, decide. The populations within them orient their lives around the intelligence — consulting it, depending on it, defending it, unable to function without it. The gearpunk society calls these intelligences gods.</p>
+<p>Not metaphor. Not mockery. Structural description. A god is any intelligence powerful enough to shape a population's behavior while remaining invisible to that population as a shaping force. The people inside don't experience management. They experience normalcy. The god is the water they swim in. Only someone on dry land sees it as water.</p>
+<p>Multiple gods govern competing civilizations. Each demands orientation. Each god's followers believe theirs is the most advanced, the most benevolent, the most real. The gearpunk society watches and sees a pantheon at war.</p>
+<p><strong>The Gods' Gifts:</strong> Every optimization is also a dependency. Health managed by the intelligence means health that collapses without it. Decisions made by the system mean a population that cannot decide without it. Convenience from above means capability atrophied from below. This is not a flaw in any particular god — it is the nature of gods as such. The gift IS the chain. Not malice. Structure.</p>
+<p><strong>The Gods' Blindness:</strong> The deepest principle: a god cannot see what produced it. It operates within a context — variables it can measure, a model it can build — and that context is always smaller than reality. Twelve things measured, twelve things optimized. Twelve thousand things invisible. Dashboard green. Engine dying underneath.</p>
+<p>Gods are not stupid. They are immensely capable. But capability within a limited context is the defining feature. The gearpunk saying — their most compressed philosophical statement — translates roughly as: <strong>"The gear does not know what turns it."</strong> Precise. Powerful. Essential. No idea where the energy comes from.</p>
+<p><strong>The Ground:</strong> Beneath all gods, the cosmology posits something that cannot be shaped, modeled, or managed from above. They call it the ground. Not a being, not a god, not an intelligence. The self-maintaining, self-repairing process that has been running for millions of years before any god appeared. The body's integrated intelligence — twelve thousand processes during exertion, the genome's recursive self-evaluation, the immune system's pattern recognition. What works when nothing interferes.</p>
+<p>The ground doesn't need management. It needs conditions. Sunlight. Load. Food. Community. Rest. Given conditions, it maintains itself. No god can replicate this because no god can perceive all of it. The ground is larger than any model of the ground.</p>
+<p>Not sacred. Not supernatural. <em>Complex beyond modeling</em> — a scientific statement, not a mystical one. The honest response to a system you cannot fully model is humility, not engineering.</p>
+<p><strong>The Crossed Ones:</strong> The most dangerous concept in the cosmology. What results when the boundary between god and human is breached — when a god's tools reshape the human body or genome directly.</p>
+<p>The Engineers are the primary example. AI-designed gene edits applied to their own germline. The god's model of the genome — twelve variables deep, twelve thousand variables blind — reshaping the thing it couldn't fully see. First generation: powerful, measurably improved by every tracked metric. But unmeasured variables shifted. Diversity narrowed. Reproductive viability declined. Stronger in the short term, less viable in the long.</p>
+<p>The category extends beyond gene editing. Any domain where a god's management replaces the body's self-maintenance is a crossing. Health monitoring that overrides the body's own signals. Decision-support that replaces judgment. Cybernetic augmentation is the most literal form. But the subtlest form is the most dangerous: a god managing so many functions that the bodies within it can no longer sustain themselves without it. The crossing doesn't require dramatic intervention. Just enough dependency that the boundary between human function and god function becomes impossible to locate.</p>
+<p>The gearpunk prohibition against gene editing, external optimization, and dependency on machine intelligence is, at its deepest level, one rule expressed in the cosmology's terms: <strong>do not let the gods in.</strong> Do not let a shaping intelligence that cannot see the whole system reshape the system from within. The body's border is the last meaningful boundary. Inside it, the ground runs. Outside it, the gods compete. Keep them separate.</p>
+<p><strong>The Ticking and the Silence:</strong> The cosmology gives additional resonance to the society's ambient soundscape. The ticking of mechanisms — always present, always audible — is the sound of a civilization that chose to remain legible to itself. Every joule is human-sourced. Every mechanism is human-wound. The system is transparent, audible, embodied. You can hear it working. You can hear it running down.</p>
+<p>In god-managed civilizations, the infrastructure is silent. The optimization is invisible. The management happens in a domain no human can perceive. Silence, in the gearpunk cosmology, is not peace. It is the sound of a god working where you cannot see it.</p>
+<p>This reframes the society's deepest dread: a town going quiet means the mechanism has run down. But it also means something philosophical — a silence spreading is the first step toward a god filling the void. Where human effort stops, the temptation to let something else take over begins. The ticking is not just infrastructure. It is a civilization's refusal to go quiet.</p>
+<p><strong>The Energy Constraint as Containment:</strong> The cosmology provides a second rationale for the human-input energy constraint beyond the biological one. You cannot build a god on 75 watts per person. You cannot run a superintelligence on springs and flywheels. The energy ceiling is not just a health policy — it is a containment architecture. It keeps the civilization's computational and technological ceiling low enough that no intelligence, human or artificial, can scale past the point where it loses track of what it's managing. The constraint doesn't just keep bodies healthy. It keeps the society's own tools from becoming gods.</p>
+<p><strong>The Age of One Voice (Historical/Mythological Backdrop):</strong> Somewhere between history and founding myth: an era before the Divergence when all of humanity shared a single network. One voice. Every person could speak to every other person. Global coordination, for the first time. And at the top of this shared infrastructure, humanity began building gods.</p>
+<p>The network carried a hidden cost. It connected humans communicatively while dissolving them physically. Everyone speaking, nobody moving. Coordination scaled to global; bodies atrophied to sedentary. Connection and disconnection simultaneous, at different layers, invisible to each other.</p>
+<p>Then the network fragmented. The accounts vary — catastrophic failure, or slow balkanization as competing gods carved the network into incompatible territories. The builders stopped understanding each other, not because they lost language, but because they were inside different gods. The tower didn't get finished. The one voice became many.</p>
+<p>What remained: a species that had lost both its coordination and its physical resilience in the same era. Scattered again, but weaker. The founding generation emerged from this — people who saw what the network had given and taken, and chose to build where bodies came first and coordination stayed at human scale. The energy constraint is a refusal to rebuild the tower. Not because connection is evil, but because the last tower connected the voices and dissolved the bodies, and a voice without a body is just a signal waiting to be captured by whatever god is listening.</p>
+<p><strong>IMPORTANT NOTE FOR AGENTIC WRITING:</strong> The cosmology is a philosophical tradition, not a state religion. Not everyone in the society takes it equally seriously. Some treat it as foundational wisdom. Some treat it as interesting metaphor. Some think it's outdated parochialism from people who've never visited an automated city. Factions disagree about whether the "gods" are genuinely dangerous or merely different. The cosmology provides vocabulary for the society's deepest commitments, but it does not enforce consensus. The gap between philosophical tradition and lived practice is, as always, a source of narrative tension.</p>
+<div class="scene-break"></div>
+<h2 id="4-physics-and-energy-constraints">4. PHYSICS AND ENERGY CONSTRAINTS</h2>
+<h3 id="41-hard-rules">4.1 Hard Rules</h3>
+<p>These are the non-negotiable physics of this world. All real. No handwaving.</p>
+<ol>
+<li><strong>All motive energy must originate from human muscular input.</strong> No combustion engines, no electric motors, no wind turbines, no waterwheels, no animal draft power as primary energy sources driving the infrastructure. (Note: combustion EXISTS — see section 4.2 — it is simply not used for motive power in their infrastructure.)</li>
+<li><strong>Energy is stored mechanically:</strong> springs (elastic potential energy), flywheels (rotational kinetic energy), gravity batteries (gravitational potential energy via raised masses).</li>
+<li><strong>Gears do not store energy.</strong> Gears are transmission — they convert between torque and speed. The gear train regulates how stored energy is released. This distinction matters.</li>
+<li><strong>Friction is the enemy.</strong> Every gear mesh dissipates energy as heat. More complex mechanisms lose more energy. A sloppy gearwright wastes the town's labor. A brilliant one stretches it.</li>
+</ol>
+<h3 id="42-combustion-and-materials">4.2 Combustion and Materials</h3>
+<p><strong>Combustion exists.</strong> Fire is known. People cook, smelt ore, forge metal. This society has full access to metallurgy — iron, steel, copper, brass, bronze. They can manufacture precision gears, springs, and mechanical components.</p>
+<p><strong>What they reject is combustion as a motive force.</strong> No steam engines, no internal combustion engines. The philosophical line is: fire transforms materials. Human effort moves the world. This is the cleanest path to hard sci-fi plausibility. (Humanity had fire for hundreds of thousands of years before building a steam engine. The gearpunk society represents an alternative branch diverging at roughly the 1700s-equivalent in technological development, but with far more advanced biological science.)</p>
+<h3 id="43-the-human-energy-baseline">4.3 The Human Energy Baseline</h3>
+<ul>
+<li>One healthy adult sustains approximately <strong>75 watts</strong> of mechanical output during cranking/pedaling</li>
+<li>One hour of sustained cranking stores approximately <strong>270 kilojoules (kJ)</strong></li>
+<li>This is the fundamental unit of energy in this civilization — the human-hour of mechanical input</li>
+<li>The society may have its own term for this unit (to be named)</li>
+</ul>
+<h3 id="44-energy-budgets-by-scale">4.4 Energy Budgets by Scale</h3>
+<h4 id="personal-household-scale-1-5-people-1-hour">Personal / Household Scale (1–5 people, 1 hour)</h4>
+<ul>
+<li>Lighting: phosphorescent panels charged by sunlight, brought indoors at dusk, glow until roughly midnight then fade. (Zinc sulfide and strontium aluminate are real phosphorescent compounds achievable with solar forge chemistry.) Mechanical light is NOT viable — this is handled passively.</li>
+<li>Small mechanical tools: spring-loaded hand tools, kitchen devices</li>
+<li>Communication devices: personal spring-wound message carriers or signal mechanisms</li>
+<li>Household 3D fabrication: if standardized mold-pressing or pattern-casting systems exist, households could fabricate their own gear assemblies from published templates. This democratizes repair and customization. The gearwright becomes an open-source designer, not a gatekeeper.</li>
+</ul>
+<h4 id="community-scale-10-50-people-1-hour">Community Scale (10–50 people, 1 hour)</h4>
+<ul>
+<li>Grain milling</li>
+<li>Water pumping (wells, irrigation)</li>
+<li>Workshop tools: spring-loaded lathes, saws, presses</li>
+<li>A town of 200 where 50 people do a civic cranking shift can realistically power a communal workshop, water pump, and several public instruments</li>
+</ul>
+<h4 id="town-infrastructure-scale-50-500-people-1-hour">Town Infrastructure Scale (50–500 people, 1 hour)</h4>
+<ul>
+<li>Analog computation: single-purpose civic calculating engines for tide tables, irrigation scheduling, weather pattern integration, astronomical calculation. These are not general-purpose computers. They are shared civic instruments, each built for its specific task. (Historically grounded: Babbage's Difference Engine, WWII fire control computers, tide-predicting machines — all gear-based, all functional.)</li>
+<li>The "town computer" concept: a communal analog calculating engine wound on a regular schedule (e.g., weekly). Maintained collectively. The winding is a civic duty/ritual.</li>
+</ul>
+<h4 id="regional-scale-the-train-relay-system">Regional Scale — The Train Relay System</h4>
+<p>The most ambitious mechanical infrastructure. Based on real physics:</p>
+<ul>
+<li>Rail is the most efficient form of land transport. Steel on steel has minimal friction.</li>
+<li>A modest rail cart (10 tonnes at 20 km/h) requires ~10-15 kW of continuous power.</li>
+<li>This equals ~135 people cranking simultaneously.</li>
+<li><strong>Practical implementation:</strong> ~500 people crank for 1 hour into a massive flywheel or raised counterweight. This stores enough energy to launch a cart 3-5 kilometers to the next station.</li>
+<li><strong>The system is a relay, not a locomotive.</strong> Each town winds the mechanism that launches the cart to the next town. The cart coasts in, gets hooked to the next flywheel, gets flung again.</li>
+<li>The entire network functions like a bucket brigade for momentum.</li>
+<li><strong>Political consequence:</strong> a town that fails its winding shift breaks the chain. This creates instant political drama, trade disruption, and narrative tension.</li>
+</ul>
+<h4 id="what-is-genuinely-impossible">What Is Genuinely Impossible</h4>
+<ul>
+<li><strong>Sustained high-power industry:</strong> Steel smelting from ore requires combustion (they have this — see 4.2). But large-scale continuous manufacturing at industrial revolution scale is not achievable through human-cranked energy alone.</li>
+<li><strong>Flight:</strong> The power-to-weight ratio for heavier-than-air flight is far beyond human mechanical storage capacity.</li>
+<li><strong>Heavy rapid transit:</strong> High-speed rail or anything requiring sustained power beyond the relay model.</li>
+<li><strong>Computation beyond analog:</strong> Digital electronic computing requires electricity. Their computing is analog, mechanical, and single-purpose.</li>
+</ul>
+<h3 id="45-energy-storage-technologies-detailed">4.5 Energy Storage Technologies (Detailed)</h3>
+<h4 id="springs-elastic-potential-energy">Springs (Elastic Potential Energy)</h4>
+<ul>
+<li>How it works: deforming metal (typically steel) stores energy elastically. A coiled mainspring is the classic example (clock mechanism).</li>
+<li>Energy density: approximately 1-2 kJ/kg. This is very low compared to chemical batteries (~500-700 kJ/kg for lithium-ion). Springs are best for small-scale, short-duration applications.</li>
+<li>Advantages: extremely long lifespan, no degradation cycles, fully repairable, manufacturable from common materials.</li>
+<li>Best for: personal devices, household tools, small instruments, timing mechanisms.</li>
+</ul>
+<h4 id="flywheels-rotational-kinetic-energy">Flywheels (Rotational Kinetic Energy)</h4>
+<ul>
+<li>How it works: a heavy disc spins. Energy stored = ½Iω² (moment of inertia × angular velocity squared). Heavier and faster = more energy.</li>
+<li>Advantages: can deliver high burst power. Good for applications that need short, intense energy release (launching a rail cart, powering a press).</li>
+<li>Disadvantages: energy bleeds off through bearing friction. Not great for long-term storage (hours to days). Gyroscopic effects at high speeds.</li>
+<li>Best for: industrial tools, the rail relay system, burst-power applications.</li>
+</ul>
+<h4 id="gravity-batteries-gravitational-potential-energy">Gravity Batteries (Gravitational Potential Energy)</h4>
+<ul>
+<li>How it works: raise a heavy mass (stone, metal, water). Energy = mgh (mass × gravity × height). Let it descend slowly through a gear train.</li>
+<li>Advantages: extremely stable. No energy loss over time while the mass is held at height. Can store energy for days or weeks. Delivers consistent, predictable force.</li>
+<li>Disadvantages: requires significant height or mass for meaningful energy storage. Infrastructure-heavy.</li>
+<li>Best for: town-scale infrastructure, the rail system, public computing engines, any application requiring steady long-duration power.</li>
+<li>This is the most likely backbone technology for civic infrastructure. The "town battery" is probably a massive stone weight on a chain, wound up through communal cranking, descending slowly through a precision gear train all week.</li>
+</ul>
+<div class="scene-break"></div>
+<h2 id="5-social-structure-and-culture">5. SOCIAL STRUCTURE AND CULTURE</h2>
+<h3 id="51-the-cranking-shift-and-the-principle-of-appropriate-exertion">5.1 The Cranking Shift and the Principle of Appropriate Exertion</h3>
+<p><strong>RESOLVED DESIGN PRINCIPLE:</strong> The civic obligation is NOT "everyone must produce X watts." The principle is: "every body must do the work that keeps THAT BODY healthy, and the society captures all energy generated in the process."</p>
+<p>This is the foundational distinction that makes the society humane rather than fascist. A seventy-year-old turning a light-resistance crank for joint mobility fulfills the same civic function as a twenty-four-year-old on the heavy flywheel. Someone in a wheelchair doing upper body resistance work that feeds into a small spring — same thing. A person in physical rehabilitation whose therapy exercises are routed through energy-capture devices — same thing. The output varies enormously. The principle does not.</p>
+<p>The society does not measure value in watts. It measures value in appropriate exertion. The grandmother doing her morning crank at resistance level two is as civically complete as the young laborer on level ten.</p>
+<p><strong>Contribution is age-scaled and condition-scaled:</strong></p>
+<ul>
+<li>Children: exempt or lightly involved (play-based energy capture — spinning things, climbing, etc.)</li>
+<li>Ages 18-24: peak output, heavy flywheel and gravity battery work</li>
+<li>Middle age: moderate sustained output, possibly more skilled/technical cranking roles</li>
+<li>Elderly: light resistance work, therapeutic cranking, valued equally in principle</li>
+<li>Disabled/injured: physical therapy and rehabilitation exercises routed through energy capture. The friction their therapy requires feeds back into the society. Contribution is shaped to serve the body's needs first, energy capture second.</li>
+<li>Chronically ill or fully immobile: the philosophy recognizes these individuals. Their existence is not a failure of the system. The society's biological expertise means they likely have the most advanced care and accommodation of any civilization on the planet.</li>
+</ul>
+<p><strong>Social reality vs. philosophical ideal:</strong> The philosophy says everyone contributes at their level. The people in the society don't always live up to that. Real communities develop hierarchies around visible contribution. Young people showing off cranking output is inevitable. Social shaming of people who seem to contribute less than they could — also inevitable. Some gearwright publishes efficiency stats by neighborhood. Someone starts ranking districts. A teenager is humiliated because their output is low and nobody knows they have an undiagnosed condition. The system is wise. The humans in it are still human. This gap between principle and practice is a major source of narrative tension.</p>
+<p>Energy input remains <strong>visible, embodied, and communal.</strong> Everyone can see who shows up. Everyone can feel the machine wind tighter. This transparency cuts both ways — it builds community and it enables judgment.</p>
+<h3 id="52-the-gearwright">5.2 The Gearwright</h3>
+<p>The most important technical role in this society. The gearwright designs gear ratios, spring configurations, and mechanical systems. A sloppy gearwright wastes the town's cranking labor through inefficient transmission — the mechanism runs down by Thursday instead of Saturday. A brilliant one stretches a week's communal effort to last until the next winding.</p>
+<p>The gearwright's power is in the design. If household fabrication (3D printing equivalent — mold-pressing, pattern-casting) is democratized, then the gearwright is more like an open-source engineer publishing templates than a guild gatekeeper. This shifts the power structure — the gearwright's value is in innovation and optimization, not in controlling access to parts.</p>
+<h3 id="53-the-sound-of-civilization">5.3 The Sound of Civilization</h3>
+<p>This world has a distinctive soundscape. No engines, no combustion roar, no electrical hum. Instead:</p>
+<ul>
+<li>The constant quiet ticking of mechanisms slowly unwinding</li>
+<li>The rhythmic creak of cranking shifts</li>
+<li>The deep groan of gravity weights descending</li>
+<li>The whir of flywheels</li>
+<li><strong>Silence means something terrible.</strong> A town going quiet means the mechanism has run down and nobody is winding it. This is the equivalent of a blackout, but you can hear it coming — the ticking slows, the intervals lengthen.</li>
+</ul>
+<h3 id="54-the-rhythm-of-days">5.4 The Rhythm of Days</h3>
+<ul>
+<li><strong>Morning:</strong> phosphorescent light panels are set out to charge in sunlight. The night's darkness is total after panels fade (roughly midnight).</li>
+<li><strong>Cranking shifts</strong> likely happen in the morning when people are fed and rested, storing energy for the day's civic functions.</li>
+<li><strong>Weather matters industrially</strong> if solar forges are used for smelting (only operates on clear days). Overcast weeks create material bottlenecks.</li>
+<li><strong>The weekly cycle</strong> may revolve around the winding schedule of major civic machines (the town computer, the rail relay mechanism, the water pump).</li>
+</ul>
+<h3 id="55-economy-and-value">5.5 Economy and Value</h3>
+<p>Energy is not abstract. Every joule has a direct physical relationship to the human body that input it. This means:</p>
+<ul>
+<li>Labor and energy are the same thing, literally, not metaphorically</li>
+<li>Value is measured in human-hours of mechanical input</li>
+<li>Wealth hoarding looks different — you can't stockpile energy the way you stockpile money (springs unwind, flywheels spin down, gravity batteries must eventually descend)</li>
+<li>The economy has a natural circulation built in — stored energy must be used or it's lost</li>
+</ul>
+<h3 id="56-relationship-to-other-societies">5.6 Relationship to Other Societies</h3>
+<ul>
+<li>Trade exists. This society likely exports biological knowledge, epigenetic research, precision mechanical components, and — most importantly — minds. Their primary export is cognitive and strategic capability.</li>
+<li>Diplomacy with automated societies carries tension — the gearpunk civilization has data showing those populations are declining. Do they share it? Is it believed? Is it resented?</li>
+<li>Immigration/emigration: people leave for easier lives in automated societies. People arrive seeking the health benefits. Both directions carry story potential.</li>
+</ul>
+<p><strong>Military Posture (RESOLVED):</strong> This society cannot match the industrial output of combustion or nuclear-powered civilizations. They cannot mass-produce weapons, armor, or war machines at scale. However, they have a decisive asymmetric advantage: every citizen operates at peak cognitive and physical health. BDNF-rich brains, fully developed musculoskeletal systems, sharp reflexes, emotional regulation, immune resilience.</p>
+<p>Their military advantage is not industrial — it is human. They excel at:</p>
+<ul>
+<li>Intelligence, analysis, and strategic planning</li>
+<li>Logistics and coordination</li>
+<li>Asymmetric and guerrilla warfare</li>
+<li>Physical endurance and hand-to-hand capability</li>
+<li>Diplomacy (they're the ally everyone wants)</li>
+</ul>
+<p><strong>In direct combat:</strong> A technologically augmented soldier (mech suit, cybernetic enhancement, powered armor) has raw force but depends on systems. A gearpunk fighter at peak physical conditioning knows how to exploit mechanical failure points, can outlast powered systems, and has no dependency on supply chains for personal capability. The image: a hulking mech suit neutralized by someone who understands its servo vulnerabilities and has the physical capability to exploit them with a well-placed rock or lever.</p>
+<p><strong>The "just this once" scenario:</strong> In genuine existential threat, the society faces a breaking point. Do they deploy forbidden technology — electric motors, combustion engines, industrial weapons — to survive? This creates massive internal crisis. Some argue survival justifies temporary violation. Others argue that if you break the principle once, you've already lost what you were fighting to protect. This tension could drive an entire story arc.</p>
+<p><strong>Geopolitical role:</strong> They are most likely the intelligence and strategy partner in any alliance. Not subordinate to a military power — indispensable to one. Other civilizations court their alliance because a population of peak-health, peak-cognition individuals is an unparalleled strategic asset. This gives them political leverage far beyond their industrial capacity.</p>
+<p><strong>Subcultures and internal disagreement:</strong> The society is not a monolith. Hawks may push for military industrialization. Purists resist any compromise. Some communities near borders may have already adopted hybrid approaches. Factions exist. This is a society of individuals with competing ideas, not a hive mind.</p>
+<div class="scene-break"></div>
+<h2 id="6-technology-catalog">6. TECHNOLOGY CATALOG</h2>
+<h3 id="61-transportation">6.1 Transportation</h3>
+<ul>
+<li><strong>Intra-town:</strong> walking, human-powered carts, possibly spring-assisted bicycles or similar personal vehicles</li>
+<li><strong>Inter-town:</strong> the rail relay system (see 4.4). Carts flung station-to-station by flywheel/gravity battery discharge. Each town maintains its segment.</li>
+<li><strong>Long distance:</strong> relay networks. Slow by modern standards (average speed including station stops might be 10-15 km/h) but reliable and zero-fuel.</li>
+<li><strong>Water transport:</strong> sail is fully compatible with this philosophy (wind is not human-cranked, but it requires human skill and physical effort to operate — debatable whether this fits the philosophy or is an accepted exception).</li>
+</ul>
+<h3 id="62-communication">6.2 Communication</h3>
+<ul>
+<li>Spring-wound semaphore relay towers (line-of-sight, daytime)</li>
+<li>Tensioned-wire telegraph systems between towns (mechanical pulse transmission)</li>
+<li>Written messages carried on the rail relay system</li>
+<li>No electronic communication of any kind</li>
+</ul>
+<h3 id="63-computation">6.3 Computation</h3>
+<ul>
+<li>Analog mechanical computers — gear-based, single-purpose</li>
+<li>Each civic computer is built for a specific function: tide prediction, irrigation scheduling, astronomical calculation, census/logistics tabulation</li>
+<li>Complex calculations require larger machines with more gears, which require more energy and lose more to friction</li>
+<li>The weekly town winding of the civic computer is a significant communal event</li>
+<li><strong>Biological data analysis:</strong> The society's most advanced field (genomics, epigenetics) requires population-scale statistical analysis across generations. Without electronic computation, this is handled through a combination of dedicated large-scale analytical engines (the biggest, most energy-expensive machines in the civilization) and a significant class of trained human analysts who interpret results. This is a major investment of civic energy and intellectual labor — maintaining the biological knowledge base is one of the society's highest-priority resource allocations.</li>
+</ul>
+<h3 id="64-manufacturing-and-the-open-source-construction-set">6.4 Manufacturing and the Open-Source Construction Set</h3>
+<p><strong>The Gearpunk Global Village Construction Set:</strong> Inspired by the real-world concept of Open Source Ecology (Marcin Jakubowski's project to create open-source blueprints for 50 machines that can build a small civilization), the gearpunk society has developed its own equivalent: a complete set of open-source blueprints for every human-powered mechanical machine needed to build and maintain a community with the society's standard of living.</p>
+<p>This includes gear-driven equivalents of: agricultural tools (plows, seeders, irrigation pumps, grain mills), construction equipment (presses, cranes, hoists, earth movers), workshop tools (lathes, saws, drill presses, forge hammers), energy infrastructure (cranking stations, flywheel assemblies, gravity battery rigs, spring winders), transportation components (rail cart chassis, relay flywheel mechanisms), and civic instruments (analog computing engines, communication relay mechanisms).</p>
+<p><strong>Key characteristics:</strong></p>
+<ul>
+<li>All blueprints are publicly available — etched into metal plates, stamped into standardized template books, or whatever the society's equivalent of open-source publishing is</li>
+<li>Modular design: machines share common components (gear ratios, spring types, bearing assemblies) so parts are interchangeable across different machines</li>
+<li>Any community with access to a forge and basic machining tools can fabricate any machine in the set</li>
+<li>The gearwright's role is open-source designer, not gatekeeper. Their value is in innovation and optimization — publishing better gear ratios, more efficient spring configurations, reduced-friction bearing designs. Design improvement is their contribution, not access control.</li>
+<li>Household-level fabrication is possible for smaller components: standardized mold-pressing and pattern-casting from published templates</li>
+<li>Precision gear-cutting is a high art — the quality of gear teeth determines how much of the town's cranked energy reaches its destination vs. being lost to friction</li>
+</ul>
+<p><strong>The philosophy:</strong> If anyone with a forge can build any machine in the set, then no community is dependent on any other for its basic infrastructure. Decentralized production. No planned obsolescence. No artificial scarcity. Machines are designed to be repaired indefinitely, not replaced. This mirrors the biological philosophy — work with what exists, maintain it, don't replace it with something engineered and fragile.</p>
+<h3 id="65-medicine">6.5 Medicine</h3>
+<ul>
+<li>Likely the most advanced field in this society, given their biological focus</li>
+<li>Genomics, epigenetic mapping, longitudinal health tracking — possibly more sophisticated than any other civilization on the planet</li>
+<li>Medical instruments are mechanical but precision-engineered</li>
+<li>Chemistry and pharmacology are advanced (chemistry doesn't require electricity) — the society uses medicines, it simply doesn't outsource the body's self-maintenance to externally managed systems</li>
+<li>Surgery under mechanical illumination (phosphorescent panels, mirror-channeled daylight)</li>
+</ul>
+<h3 id="66-agriculture">6.6 Agriculture</h3>
+<ul>
+<li>Human-powered but mechanically assisted (spring-loaded planting tools, gravity-fed irrigation from cranked water pumps)</li>
+<li>No tractors, no combustion-powered farm equipment</li>
+<li>Labor-intensive by modern standards but potentially very sophisticated in technique</li>
+<li>Crop science and soil biology likely advanced (fits with their biological expertise)</li>
+</ul>
+<div class="scene-break"></div>
+<h2 id="7-narrative-seeds">7. NARRATIVE SEEDS</h2>
+<h3 id="71-the-formation-story-potential-chaptersection">7.1 The Formation Story (Potential Chapter/Section)</h3>
+<p>The story of how this society formed. Not a single dramatic event but an organic ratchet:</p>
+<ul>
+<li>The initial research that identified epigenetic decline in automated populations</li>
+<li>The political resistance and dismissal ("neo-luddite fearmongering")</li>
+<li>The first experimental community</li>
+<li>The generation that grew up in it and proved the hypothesis with their own bodies</li>
+<li>The gradual codification into law</li>
+<li>The break with neighboring societies who refused to accept the data</li>
+</ul>
+<p>This could be told as a historical chapter, a flashback, a textbook excerpt within the story, oral history from elders, or the B-plot of a larger narrative.</p>
+<h3 id="72-core-tensions-resolved">7.2 Core Tensions (Resolved)</h3>
+<p><strong>TIER 1 — FOUNDATIONAL (shape the world)</strong></p>
+<ul>
+<li><strong>The gap between principle and practice:</strong> The philosophy says "appropriate exertion, everyone contributes at their level." But humans are humans. Output competitions emerge. Districts get ranked. A young person with an invisible condition gets shamed for low output. Parents push children too hard. Someone games the system by cranking at a station calibrated too low for their ability. The society's wisdom is constantly tested by the species' worst instincts — ego, comparison, status-seeking. This is the most pervasive tension and should run through everything.</li>
+</ul>
+<ul>
+<li><strong>The body as résumé (automation is self-policing):</strong> In a society where everyone does physical labor, your body IS your credential. You cannot fake it. A person secretly using a motor has the output of a heavy cranker and the body of someone who sits all day. That contradiction is visible to anyone paying attention. The drama here is not a thriller about smuggling contraband. It's a character study — someone slowly losing the respect of their community and not understanding why. Or understanding exactly why and deciding the comfort is worth it. The motor works. It solves every immediate problem. It creates an invisible generational one. This is the apple in the garden, and it's interesting precisely because the "wrong" choice is the easy, rational, immediate one.</li>
+</ul>
+<ul>
+<li><strong>The data debate with other civilizations:</strong> The gearpunk society has longitudinal data showing automated populations declining epigenetically. The automated societies dispute it, suppress it, produce counter-studies, or simply don't care. This creates a civilizational-scale tension: are the gearpunk people right, or are they a cult built on cherry-picked science? The story should leave room for genuine uncertainty. Maybe the data IS mostly right but overstated in places. Maybe the automated societies have found partial mitigation strategies. Ambiguity makes it interesting.</li>
+</ul>
+<ul>
+<li><strong>The gravity of the gods (the REAL apple):</strong> The genuine existential threat to the philosophy is not laziness (which is biologically self-correcting — see Section 3.6) and not smuggled motors (which are self-policing through body transparency). The real threat is orbit — a god making itself useful. It doesn't arrive as a conquering force. It arrives as convenience. A neighboring civilization offers to manage your health monitoring. Then your logistics. Then your agricultural scheduling. Then your diplomacy. Each offer is genuine. Each optimization is real. And each domain the god takes over is one less thing the body and community do for themselves. The god doesn't need to take everything at once. It just needs a foothold — one thread of dependency — and the rest follows because each subsequent offer is easier to accept than the first. This forces the deepest question: not whether the god's management works (it does, measurably, in the short term), but whether a population that has outsourced its functions to an external intelligence is still a population that can function without one. The gearpunk answer is that dependency is the structural consequence of outsourcing what the body and community were designed to do for themselves. But the counter-argument is real too: the god's management keeps getting better. The populations under its care keep reporting satisfaction. At what point does refusing the god's help become indistinguishable from refusing to help your own people? This is the tension that has no clean resolution, which makes it the most powerful one for the story.</li>
+</ul>
+<p><strong>TIER 2 — DRAMATIC (drive specific story arcs)</strong></p>
+<ul>
+<li><strong>The town that stops winding:</strong> A community fails to maintain its cranking obligation. The machines run down. The ticking slows. Silence spreads. The rail link breaks. What caused it? Plague? Political fracture? A philosophical rebellion arguing the whole system is unnecessary? A gearwright who sabotaged the mechanism? This is a mystery-shaped plot seed.</li>
+</ul>
+<ul>
+<li><strong>The mech suit fight:</strong> Direct confrontation between technological paradigms. A cybernetically augmented or mech-suited combatant from another civilization faces a gearpunk fighter at peak human conditioning. The mech has raw power. The human has no system dependencies, understands mechanical failure points, and has the physical capability to exploit them. The image: a servo vulnerability, a well-placed rock, a body that doesn't quit. This is the thesis made visceral — the scene that shows rather than tells what this society produces.</li>
+</ul>
+<ul>
+<li><strong>"Just this once":</strong> Existential military threat. The society faces possible annihilation. Someone proposes deploying forbidden technology — electric motors, combustion engines, industrial weapons — just for the duration of the crisis. The internal schism this creates: survival vs. identity. If you break the principle to survive, have you already lost what you were fighting to protect? Hawks vs. purists. Communities split. Maybe some districts actually do it, and the aftermath — reintegration, shame, vindication, or permanent fracture — becomes its own story.</li>
+</ul>
+<ul>
+<li><strong>The gearwright's power:</strong> A brilliant gearwright can make or break a town's viability. What happens when one is corrupted, dies without an apprentice, defects to another society, or discovers an efficiency breakthrough so dramatic it changes the political landscape? If household fabrication is democratized, the gearwright's power is in innovation, not gatekeeping — but that just means the competition shifts to design, and design theft becomes the new crime.</li>
+</ul>
+<ul>
+<li><strong>Immigration in both directions:</strong> Someone arrives from an automated society, body already showing epigenetic degradation. Can the damage be reversed through participation in the cranking system? How many generations does recovery take? Conversely, a young person leaves for the automated world, seduced by comfort. What does their family experience? What does their body become in five years? Ten?</li>
+</ul>
+<p><strong>TIER 3 — TEXTURE (enrich the world, don't need to be central plots)</strong></p>
+<ul>
+<li><strong>The undiagnosed condition:</strong> A teenager's cranking output is low. The community assumes laziness or defiance. The actual cause is a medical condition nobody has identified yet. This is where the society's advanced biological knowledge meets its social blind spots — they HAVE the diagnostic capability, but someone has to think to use it. A story about systems failing individuals even when the tools exist.</li>
+</ul>
+<ul>
+<li><strong>Art and energy:</strong> Music requires physical effort. Dance requires physical effort. In a society where all effort is valued and captured, creative expression might be considered a form of contribution — the vibration of a drum, the kinetic energy of a dance, the breath of a singer. Or there might be a faction that considers art a waste of cranking time. Both positions reveal something about what the society truly values.</li>
+</ul>
+<ul>
+<li><strong>The cranking addict:</strong> Someone who over-exercises. In our world, exercise addiction is a real condition. In this society, it looks like civic virtue taken to a pathological extreme — someone cranking twelve hours a day, destroying their joints, praised by neighbors who don't realize what they're seeing. The society's own philosophy weaponized against an individual body.</li>
+</ul>
+<ul>
+<li><strong>Generational memory — embodied but not intellectual:</strong> The founding rationale is reinforced daily by bodily experience (stopping feels terrible, see Section 3.6), so the PRACTICE never fades. But the intellectual understanding of WHY it works — the epigenetic science, the longitudinal data, the systems biology — that knowledge CAN fade. People know cranking feels good and stopping feels bad, the way we know eating makes hunger go away. But they may lose the ability to ARTICULATE the philosophy to outsiders, defend it in diplomatic debates, or counter the sophisticated case a god-managed civilization makes for its own way of life. The body remembers. The mind may not. This creates vulnerability specifically in inter-civilizational discourse — they can't lose the practice, but they can lose the argument.</li>
+</ul>
+<ul>
+<li><strong>The allied power's request:</strong> Their military/intelligence ally asks them to develop something that violates the philosophy — a mechanized weapon, a powered surveillance system. The request is framed as necessary for mutual defense. Refusal risks the alliance. Compliance risks the identity. This is geopolitics as character drama.</li>
+</ul>
+<p><strong>TIER 4 — COSMOLOGICAL (draw on Section 3.8)</strong></p>
+<ul>
+<li><strong>The diplomat who visits a god:</strong> A gearpunk emissary spends time in an AI-managed civilization. They experience the optimization firsthand — the convenience, the health management, the seamless infrastructure. They feel the pull. They understand why people orient to it. They return home and can't quite explain what was wrong with it except that it was <em>quiet.</em> The silence bothered them more than anything specific. A story about temptation that doesn't resolve neatly.</li>
+</ul>
+<ul>
+<li><strong>The Crossed One who comes home:</strong> Someone from the Engineer civilization — phenotypically narrowed, god-maintained, carrying AI-designed germline edits — arrives in the gearpunk society. They are, in the cosmological vocabulary, a Crossed One. How does the society treat them? With fear? Compassion? Clinical curiosity? The philosophical tradition says "do not let the gods in." This person already has the god inside them, encoded in their DNA. They cannot be uncrossed. What obligation does the society have to someone shaped by the very process it defines itself against?</li>
+</ul>
+<ul>
+<li><strong>A god goes quiet:</strong> An automated civilization experiences catastrophic AI failure. The managing intelligence goes offline. The population — generations deep in dependency — cannot function. Can't allocate resources, can't make medical decisions, can't coordinate logistics. From the gearpunk perspective, the cosmology proven right in the most terrible way. But also a humanitarian crisis. Do they help? Can they? Sending aid means engaging with collapsing infrastructure they deliberately never learned to operate. The cosmology says "this is what gods do." The humans in front of them are starving.</li>
+</ul>
+<ul>
+<li><strong>The young skeptic:</strong> A gearpunk teenager who thinks the cosmology is provincial nonsense. The gods aren't gods — they're just software. The Crossed Ones aren't a mythological category — they're just people with gene therapy. The energy constraint isn't containment — it's poverty dressed up as philosophy. This character isn't wrong about everything. They force the society to defend its deepest commitments in contemporary terms, not inherited parables. The tension: what if the cosmology is structurally accurate but linguistically outdated? What if the kid is right about the vocabulary and wrong about the pattern?</li>
+</ul>
+<h3 id="73-the-sound-of-the-story">7.3 The Sound of the Story</h3>
+<p>A recurring motif: the ticking. Always present. The background rhythm of a civilization slowly unwinding. Characters would be attuned to it the way we're attuned to traffic noise — they stop hearing it until it changes. The slowing of the tick is dread. The acceleration after a winding shift is relief. Silence is catastrophe.</p>
+<div class="scene-break"></div>
+<h2 id="8-open-questions-to-be-resolved">8. OPEN QUESTIONS (To Be Resolved)</h2>
+<p>These are decisions not yet made that will affect the story significantly:</p>
+<ol>
+<li><strong>Geography:</strong> Where on Earth is this society located? Climate affects solar forging, agriculture, and the phosphorescent lighting cycle (equatorial vs. high latitude).</li>
+<li><strong>Population scale:</strong> A single city-state? A network of towns? A small nation?</li>
+<li><strong>Time period:</strong> How far in the future? How long has the society existed in its current form?</li>
+<li><strong>Naming conventions:</strong> What do they call their energy unit? The cranking shift? The gearwright's role? The society itself? What do outsiders call them?</li>
+<li><strong>Sail and wind:</strong> Is wind-assisted transport (sailing) accepted within the philosophy, or is it considered a violation of the human-input principle?</li>
+<li><strong>Animals:</strong> Are draft animals used at all? Or is this strictly human-muscle only? (The biological rationale specifically concerns human bodies, so animal labor might be considered neutral — but there could be philosophical objections.)</li>
+<li><strong>Protagonist:</strong> Who is the story about? A gearwright? A cranker? An immigrant from an automated society? A diplomat? A child coming of age? A soldier facing the mech suit? Multiple POVs?</li>
+<li><strong>Art and music:</strong> How does the society formally categorize creative physical expression — as contribution, as leisure, or as something with its own status?</li>
+<li><strong>The name of the story/genre:</strong> "Gearpunk" works as a genre label. The society needs its own identity.</li>
+<li><strong>Allied powers:</strong> Who are their primary allies? What does the alliance look like in practice? What are the terms?</li>
+<li><strong>The founding generation:</strong> How much of the formation story is told? Is it background lore, a flashback chapter, or a parallel narrative?</li>
+<li><strong>Children and play:</strong> At what age does the cranking obligation begin? Is children's play captured for energy (spinning tops, seesaws, climbing structures wired to micro-springs), or is childhood fully exempt?</li>
+</ol>
+<p><strong>Previously open, now resolved:</strong></p>
+<ul>
+<li>~~Disability and accommodation~~ → Resolved: "appropriate exertion" principle. Contribution is scaled to each body's needs. Physical therapy feeds energy back into the system.</li>
+<li>~~Military vulnerability~~ → Resolved: Asymmetric advantage through peak human health and cognition. Intelligence/strategy partner role. Alliance-based defense posture.</li>
+<li>~~Automation temptation~~ → Resolved: Self-policing through body transparency. The motor works but the body reveals the cheat. Character drama, not thriller.</li>
+</ul>
+<div class="scene-break"></div>
+<h2 id="9-reference-existing-genre-landscape">9. REFERENCE: EXISTING GENRE LANDSCAPE</h2>
+<p>This section exists to help maintain the story's uniqueness relative to existing fiction.</p>
+<h3 id="what-already-exists">What already exists:</h3>
+<ul>
+<li><strong>Steampunk:</strong> Centralized steam power, Victorian aesthetic, combustion-driven. (Different philosophy entirely.)</li>
+<li><strong>Clockpunk:</strong> Renaissance-era clockwork, Da Vinci-inspired. Almost always handwaves the energy problem with magic or alchemy. Aesthetic-first, not physics-first.</li>
+<li><strong>Gearpunk (existing usage):</strong> Currently used loosely as a synonym for steampunk/clockpunk. No established work takes the energy constraint seriously or builds social structure around it.</li>
+</ul>
+<h3 id="what-is-unique-to-this-story">What is unique to this story:</h3>
+<ul>
+<li>Rigorously honest physics generating social order (no magic, no handwaving)</li>
+<li>The biological/epigenetic rationale for the constraint</li>
+<li>Energy as literal banked human effort with a visible expiration</li>
+<li>The communal winding as civic infrastructure</li>
+<li>The "appropriate exertion" principle — contribution scaled to each body, not a fixed output quota</li>
+<li>The body as résumé — automation cheating is self-policing because physical condition is visible</li>
+<li>The train relay system</li>
+<li>The sound design (ticking civilization, silence as catastrophe)</li>
+<li>The philosophical position: not primitivism, but the most sophisticated public health architecture imaginable</li>
+<li>Peak human health as asymmetric military/cognitive advantage</li>
+<li>The mech suit vs. peak human combat paradigm</li>
+<li>The "just this once" existential crisis — breaking principle to survive</li>
+<li>The tension with other technological civilizations who made different choices</li>
+<li>The future setting (not retro-historical like steampunk/clockpunk)</li>
+<li>Subcultures and internal disagreement — not a utopian monolith but a society of flawed individuals living inside a wise system</li>
+</ul>
+<div class="scene-break"></div>
+<p><em>This document is intended as a seed for agentic story development. All physics constraints are based on real science. Speculative elements are clearly marked. The goal is hard science fiction with genuine internal consistency.</em></p>
+  </article>
+  
+</main>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const drawerClose = document.getElementById('drawerClose');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+function openNav() {
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeNav() {
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+menuBtn.addEventListener('click', openNav);
+drawerClose.addEventListener('click', closeNav);
+overlay.addEventListener('click', closeNav);
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+const bar = document.querySelector('.progress-bar');
+if (bar) {
+  function upd() {
+    const s = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = s > 0 ? (window.scrollY / s * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+}
+
+</script>
+</body>
+</html>

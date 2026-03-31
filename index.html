@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Gearpunk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="index.html" class="site-title">Gearpunk</a>
+  <span class="breadcrumb">Gearpunk</span>
+</header>
+
+<div class="progress"><div class="progress-bar"></div></div>
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <span class="drawer-title">Navigation</span>
+    <button class="drawer-close" id="drawerClose">&#215;</button>
+  </div>
+  <div class="nav-sec">
+<a href="index.html" class="nav-a cur">Home</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">World</div>
+<a href="bible.html" class="nav-a">Gearpunk Bible</a>
+<a href="demiurge.html" class="nav-a">The Demiurge Protocol</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">The Winding Shift</div>
+<a href="chapters/01-the-meridian.html" class="nav-a sub">Ch&nbsp;1: The Meridian</a>
+<a href="chapters/02-two-readings.html" class="nav-a sub">Ch&nbsp;2: Two Readings</a>
+<a href="chapters/03-the-proof.html" class="nav-a sub">Ch&nbsp;3: The Proof</a>
+<a href="chapters/04-the-ratchet.html" class="nav-a sub">Ch&nbsp;4: The Ratchet</a>
+<a href="chapters/05-the-conversation.html" class="nav-a sub">Ch&nbsp;5: The Conversation</a>
+<a href="chapters/06-the-first-winding.html" class="nav-a sub">Ch&nbsp;6: The First Winding</a>
+<a href="chapters/07-eighteen-years-later.html" class="nav-a sub">Ch&nbsp;7: Eighteen Years Later</a>
+<a href="chapters/08-the-visitor.html" class="nav-a sub">Ch&nbsp;8: The Visitor</a>
+<a href="chapters/09-the-temptation.html" class="nav-a sub">Ch&nbsp;9: The Temptation</a>
+<a href="chapters/10-the-morning-ticking.html" class="nav-a sub">Ch&nbsp;10: The Morning Ticking</a>
+</div>
+<div class="nav-sec">
+<div class="nav-label">Reference</div>
+<a href="voice.html" class="nav-a">Voice &amp; Style</a>
+</div>
+</nav>
+
+<main class="content">
+  <article>
+<div class="hero">
+  <h1>Gearpunk</h1>
+  <p>A worldbuilding project. A hard sci-fi novella in ten chapters.<br>
+  A civilization built on motion, biology, and mechanical humility.</p>
+</div>
+<span class="sec-label">World</span>
+<div class="card-grid"><a href="bible.html" class="card"><div class="card-title">Gearpunk Bible</div><div class="card-sub">Master worldbuilding reference</div></a><a href="demiurge.html" class="card"><div class="card-title">The Demiurge Protocol</div><div class="card-sub">Philosophical companion</div></a></div>
+<span class="sec-label">The Winding Shift</span>
+<div class="card-grid"><a href="chapters/01-the-meridian.html" class="card"><div class="card-title">Ch 1: The Meridian</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/02-two-readings.html" class="card"><div class="card-title">Ch 2: Two Readings</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/03-the-proof.html" class="card"><div class="card-title">Ch 3: The Proof</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/04-the-ratchet.html" class="card"><div class="card-title">Ch 4: The Ratchet</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/05-the-conversation.html" class="card"><div class="card-title">Ch 5: The Conversation</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/06-the-first-winding.html" class="card"><div class="card-title">Ch 6: The First Winding</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/07-eighteen-years-later.html" class="card"><div class="card-title">Ch 7: Eighteen Years Later</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/08-the-visitor.html" class="card"><div class="card-title">Ch 8: The Visitor</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/09-the-temptation.html" class="card"><div class="card-title">Ch 9: The Temptation</div><div class="card-sub">The Winding Shift</div></a><a href="chapters/10-the-morning-ticking.html" class="card"><div class="card-title">Ch 10: The Morning Ticking</div><div class="card-sub">The Winding Shift</div></a></div>
+<span class="sec-label">Reference</span>
+<div class="card-grid"><a href="voice.html" class="card"><div class="card-title">Voice &amp; Style Guide</div><div class="card-sub">Prose craft reference</div></a></div>
+  </article>
+  
+</main>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const drawerClose = document.getElementById('drawerClose');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+function openNav() {
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeNav() {
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+menuBtn.addEventListener('click', openNav);
+drawerClose.addEventListener('click', closeNav);
+overlay.addEventListener('click', closeNav);
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+const bar = document.querySelector('.progress-bar');
+if (bar) {
+  function upd() {
+    const s = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = s > 0 ? (window.scrollY / s * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+}
+
+</script>
+</body>
+</html>
