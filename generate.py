@@ -7,7 +7,9 @@ Output: gearpunk-reader/ (this directory)
 
 import re
 import html as html_lib
+import subprocess
 from pathlib import Path
+from datetime import datetime
 
 GEARPUNK = Path("C:/Users/Trist/engineering/gearpunk")
 OUT = Path(__file__).parent
@@ -24,6 +26,41 @@ CHAPTERS = [
     ("09-the-temptation",       "The Temptation",        9),
     ("10-the-morning-ticking",  "The Morning Ticking",   10),
 ]
+
+CHANGELOG = [
+    ("2026-04-01", [
+        "All 10 chapters revised (2 passes each) — narrator mediation cut, sensory detail added, dialogue made spoken",
+        "New spring failure scene added to Chapter 7",
+        "Demiurge mythology woven subtly through all chapters",
+        "Demiurge Protocol consolidated from two documents into one",
+        "Bible updated with cosmology section (gods, the ground, the Crossed Ones)",
+        "Under-construction banner added",
+    ]),
+    ("2026-03-30", [
+        "Gearpunk reader site launched",
+        "All 10 chapters of The Winding Shift published (first draft)",
+        "Gearpunk Bible, Demiurge Protocol, and Voice guide published",
+    ]),
+]
+
+
+def get_file_mtime(path):
+    """Get file modification time as a formatted date string."""
+    if path.exists():
+        ts = path.stat().st_mtime
+        return datetime.fromtimestamp(ts).strftime("%B %#d, %Y")
+    return None
+
+
+def get_word_count(path):
+    """Rough word count from a markdown file."""
+    if path.exists():
+        text = path.read_text(encoding="utf-8")
+        # Strip markdown headers and blank lines
+        words = len(text.split())
+        return f"{words:,}"
+    return None
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Markdown → HTML
@@ -176,6 +213,7 @@ def nav_html(root, cur):
         '<div class="nav-sec">',
         '<div class="nav-label">Reference</div>',
         link("voice.html", "Voice &amp; Style"),
+        link("changelog.html", "Changelog"),
         "</div>",
     ]
     return "\n".join(parts)
@@ -452,6 +490,29 @@ article blockquote {
 .card-title { font-size: 14px; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
 .card-sub { font-family: var(--font-ui); font-size: 11px; color: var(--text-dim); }
 
+/* ── Chapter metadata ─────────────────────────────────── */
+.ch-meta {
+  font-family: var(--font-ui); font-size: 11px;
+  color: var(--text-dim); letter-spacing: .04em;
+  text-align: center; margin-top: 2.5em; padding-bottom: .5em;
+}
+
+/* ── Changelog ───────────────────────────────────────── */
+.changelog-entry { margin-bottom: 2em; }
+.changelog-date {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 700;
+  color: var(--accent); letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+.changelog-entry ul {
+  list-style: none; padding: 0; margin: 0;
+}
+.changelog-entry li {
+  font-size: .9em; color: var(--text-dim);
+  padding: 4px 0 4px 16px; line-height: 1.5;
+  border-left: 2px solid var(--border);
+}
+
 @media print {
   .topbar, .drawer, .overlay, .progress { display: none; }
   .content { padding-top: 0; }
@@ -594,10 +655,25 @@ def gen_doc(src_path, title, breadcrumb, cur_page, with_toc=True):
 
 
 def gen_chapter(slug, title, num):
-    src = (
-        GEARPUNK / "the-winding-shift" / "chapters" / f"{slug}.md"
-    ).read_text(encoding="utf-8")
+    src_path = GEARPUNK / "the-winding-shift" / "chapters" / f"{slug}.md"
+    src = src_path.read_text(encoding="utf-8")
     body, _ = md_to_html(src)
+
+    # Chapter metadata footer
+    mtime = get_file_mtime(src_path)
+    wc = get_word_count(src_path)
+    meta_parts = []
+    if mtime:
+        meta_parts.append(f"Last revised: {mtime}")
+    if wc:
+        meta_parts.append(f"{wc} words")
+    meta_html = ""
+    if meta_parts:
+        meta_html = (
+            '<div class="ch-meta">'
+            + " &middot; ".join(meta_parts)
+            + '</div>'
+        )
 
     idx = num - 1
     prev_html = ""
@@ -614,7 +690,7 @@ def gen_chapter(slug, title, num):
             f'<a href="{ns}.html" class="nxt">'
             f'<small>Next &#8594;</small>Ch {nn}: {nt}</a>'
         )
-    ch_nav = f'<nav class="ch-nav">{prev_html}{next_html}</nav>'
+    ch_nav = f'{meta_html}<nav class="ch-nav">{prev_html}{next_html}</nav>'
 
     return page_tmpl(
         f"Ch {num}: {title}",
@@ -625,6 +701,44 @@ def gen_chapter(slug, title, num):
         body,
         ch_nav,
     )
+
+
+def gen_changelog():
+    entries = []
+    for date_str, items in CHANGELOG:
+        li = "".join(f"<li>{html_lib.escape(item)}</li>" for item in items)
+        entries.append(
+            f'<div class="changelog-entry">'
+            f'<div class="changelog-date">{date_str}</div>'
+            f'<ul>{li}</ul></div>'
+        )
+
+    # Word count summary
+    total = 0
+    rows = []
+    for slug, title, num in CHAPTERS:
+        p = GEARPUNK / "the-winding-shift" / "chapters" / f"{slug}.md"
+        wc = len(p.read_text(encoding="utf-8").split()) if p.exists() else 0
+        total += wc
+        rows.append(f"<tr><td>Ch {num}: {title}</td><td>{wc:,}</td></tr>")
+    rows.append(f'<tr style="border-top:1px solid var(--border);font-weight:600">'
+                f'<td>Total</td><td>{total:,}</td></tr>')
+
+    body = f"""\
+<h1>Changelog</h1>
+<p style="color:var(--text-dim);font-size:.9em;margin-bottom:2em">
+What changed and when. This project is a working draft; revisions happen in public.</p>
+{"".join(entries)}
+<h2 id="word-counts">Current Word Counts</h2>
+<table style="width:100%;font-family:var(--font-ui);font-size:13px;border-collapse:collapse">
+{"".join(rows)}
+</table>
+<style>
+table td {{ padding: 6px 0; color: var(--text-dim); }}
+table td:last-child {{ text-align: right; font-variant-numeric: tabular-nums; }}
+</style>"""
+
+    return page_tmpl("Changelog", "Changelog", "style.css", "", "changelog.html", body)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -650,11 +764,12 @@ def main():
     w(OUT / "voice.html",
       gen_doc(GEARPUNK / "the-winding-shift" / "VOICE.md", "Voice & Style Guide", "Voice", "voice.html"),
       "voice.html")
+    w(OUT / "changelog.html", gen_changelog(), "changelog.html")
 
     for slug, title, num in CHAPTERS:
         w(OUT / "chapters" / f"{slug}.html", gen_chapter(slug, title, num), f"chapters/{slug}.html")
 
-    print(f"\nDone: {5 + len(CHAPTERS)} files -> {OUT}")
+    print(f"\nDone: {6 + len(CHAPTERS)} files -> {OUT}")
 
 
 if __name__ == "__main__":
