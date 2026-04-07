@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parasympathetic Activation Guide — Gearpunk</title>
+<link rel="stylesheet" href="style.css">
+<style>
+article table {
+  width: 100%; border-collapse: collapse;
+  margin: 1.2em 0 1.5em; font-size: .9em;
+}
+article th {
+  text-align: left; padding: 8px 12px;
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--text-dim); border-bottom: 1px solid var(--accent);
+  background: var(--surface-raised);
+}
+article td {
+  padding: 9px 12px; vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--text); line-height: 1.55;
+}
+article tr:last-child td { border-bottom: none; }
+article tbody tr:hover td { background: rgba(196,134,58,.03); }
+article td:first-child { color: var(--accent); font-weight: 600; white-space: nowrap; }
+@media (max-width: 520px) {
+  article table, article thead, article tbody, article th, article td, article tr {
+    display: block;
+  }
+  article thead { display: none; }
+  article td { padding: 6px 0; border-bottom: none; white-space: normal; }
+  article td:first-child {
+    font-size: .8em; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--accent); margin-top: 1em; padding-bottom: 2px;
+  }
+  article tr { border-bottom: 1px solid var(--border); padding: 8px 0; }
+  article tr:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="index.html" class="site-title">Gearpunk</a>
+  <span class="breadcrumb">Nervous System</span>
+</header>
+
+<div class="progress"><div class="progress-bar"></div></div>
+<div class="overlay" id="overlay"></div>
+
+<nav class="drawer" id="drawer">
+  <div class="drawer-head">
+    <span class="drawer-title">Navigation</span>
+    <button class="drawer-close" id="drawerClose">&#215;</button>
+  </div>
+  <div class="nav-sec">
+    <a href="index.html" class="nav-a">Home</a>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-label">World</div>
+    <a href="bible.html" class="nav-a">Gearpunk Bible</a>
+    <a href="demiurge.html" class="nav-a">The Demiurge Protocol</a>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-label">The Winding Shift</div>
+    <a href="chapters/01-the-meridian.html" class="nav-a sub">Ch&nbsp;1: The Meridian</a>
+    <a href="chapters/02-two-readings.html" class="nav-a sub">Ch&nbsp;2: Two Readings</a>
+    <a href="chapters/03-the-proof.html" class="nav-a sub">Ch&nbsp;3: The Proof</a>
+    <a href="chapters/04-the-ratchet.html" class="nav-a sub">Ch&nbsp;4: The Ratchet</a>
+    <a href="chapters/05-the-conversation.html" class="nav-a sub">Ch&nbsp;5: The Conversation</a>
+    <a href="chapters/06-the-first-winding.html" class="nav-a sub">Ch&nbsp;6: The First Winding</a>
+    <a href="chapters/07-eighteen-years-later.html" class="nav-a sub">Ch&nbsp;7: Eighteen Years Later</a>
+    <a href="chapters/08-the-visitor.html" class="nav-a sub">Ch&nbsp;8: The Visitor</a>
+    <a href="chapters/09-the-temptation.html" class="nav-a sub">Ch&nbsp;9: The Temptation</a>
+    <a href="chapters/10-the-morning-ticking.html" class="nav-a sub">Ch&nbsp;10: The Morning Ticking</a>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-label">Reference</div>
+    <a href="voice.html" class="nav-a">Voice &amp; Style</a>
+    <a href="nervous-system.html" class="nav-a cur">Nervous System Guide</a>
+    <a href="changelog.html" class="nav-a">Changelog</a>
+  </div>
+</nav>
+
+<main class="content">
+  <article>
+
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li class="t2"><a href="#the-core-problem">The Core Problem</a></li>
+    <li class="t2"><a href="#the-vagus-nerve">1. The Vagus Nerve</a></li>
+    <li class="t3"><a href="#breathing">Breathing</a></li>
+    <li class="t3"><a href="#cold-exposure">Cold Exposure</a></li>
+    <li class="t3"><a href="#humming-chanting-gargling">Humming, Chanting, Gargling</a></li>
+    <li class="t2"><a href="#sleep">2. Sleep</a></li>
+    <li class="t3"><a href="#non-negotiables">Non-Negotiables</a></li>
+    <li class="t3"><a href="#sleep-onset-protocol">Sleep Onset Protocol</a></li>
+    <li class="t3"><a href="#deep-sleep-support">Deep Sleep Support</a></li>
+    <li class="t2"><a href="#food-as-nervous-system-medicine">3. Food as Nervous System Medicine</a></li>
+    <li class="t3"><a href="#what-you-have-working">What You Have Working</a></li>
+    <li class="t3"><a href="#the-gaps-to-fill">The Gaps to Fill</a></li>
+    <li class="t3"><a href="#gut-brain-axis">Gut-Brain Axis</a></li>
+    <li class="t2"><a href="#movement">4. Movement</a></li>
+    <li class="t2"><a href="#environment-and-lifestyle">5. Environment and Lifestyle</a></li>
+    <li class="t2"><a href="#daily-protocol">6. Daily Protocol</a></li>
+    <li class="t2"><a href="#tracking-progress">7. Tracking Progress</a></li>
+    <li class="t2"><a href="#the-deeper-frame">The Deeper Frame</a></li>
+  </ol>
+</div>
+
+<h1 id="parasympathetic-activation-guide">Parasympathetic Activation Guide</h1>
+
+<p><em>Your nervous system has two modes: sympathetic (gas pedal) and parasympathetic (brake). Your HRV data shows the gas pedal is stuck on. This guide is about strengthening the brake.</em></p>
+
+<div class="scene-break"></div>
+
+<h2 id="the-core-problem">The Core Problem</h2>
+
+<p>Your weekly HRV: ~40–55ms (sympathetic dominant). Your work-from-home Tuesday: ~130ms. Your nervous system isn't broken — it's overwhelmed. The capacity is there. Tuesday proved it.</p>
+
+<div class="scene-break"></div>
+
+<h2 id="the-vagus-nerve">1. The Vagus Nerve — Your Master Switch</h2>
+
+<p>The vagus nerve is the primary parasympathetic highway, running from brainstem to gut. Everything below targets it directly or indirectly.</p>
+
+<h3 id="breathing">Breathing (Highest Leverage, Zero Cost)</h3>
+
+<h4>Physiological sigh — the fastest known reset:</h4>
+<ul>
+  <li>Double inhale through nose (one full, one short top-up)</li>
+  <li>Long slow exhale through mouth</li>
+  <li>One cycle measurably shifts autonomic state</li>
+  <li>Use in real time: commute, before meals, when you notice tension</li>
+</ul>
+
+<h4>Slow nasal breathing — 5.5 breaths per minute:</h4>
+<ul>
+  <li>Inhale ~5.5 seconds, exhale ~5.5 seconds</li>
+  <li>All through the nose</li>
+  <li>5–10 minutes daily shifts baseline HRV within 2–3 weeks</li>
+  <li>This is the single most evidence-backed parasympathetic practice that exists</li>
+</ul>
+
+<h4>Extended exhale breathing:</h4>
+<ul>
+  <li>Inhale 4 seconds, exhale 6–8 seconds</li>
+  <li>The exhale is when parasympathetic activation happens</li>
+  <li>Longer exhale = stronger vagal tone</li>
+  <li>Use before sleep</li>
+</ul>
+
+<h4>Box breathing (4-4-4-4):</h4>
+<ul>
+  <li>Inhale 4, hold 4, exhale 4, hold 4</li>
+  <li>More structured, good if your mind needs something to anchor to</li>
+  <li>Navy SEALs use this for sympathetic override — it works in both directions</li>
+</ul>
+
+<h3 id="cold-exposure">Cold Exposure (Strong Vagal Stimulus)</h3>
+<ul>
+  <li>Cold water on face activates the dive reflex — immediate parasympathetic shift</li>
+  <li>End showers with 30–90 seconds of cold</li>
+  <li>Not about suffering. The involuntary gasp followed by slow breathing adaptation IS the vagal training</li>
+  <li>Start with just face/neck if full cold showers are too much</li>
+</ul>
+
+<h3 id="humming-chanting-gargling">Humming, Chanting, Gargling</h3>
+<ul>
+  <li>The vagus nerve runs through the throat</li>
+  <li>Humming or extended "om" on exhale vibrates it directly</li>
+  <li>Even vigorous gargling with water stimulates the same pathway</li>
+  <li>Sounds odd. Measurably effective.</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="sleep">2. Sleep — Where Recovery Actually Happens</h2>
+
+<p>Your Apple Watch data shows fragmented deep sleep and frequent awake spikes. This is where parasympathetic restoration either happens or doesn't.</p>
+
+<h3 id="non-negotiables">Non-Negotiables</h3>
+<ul>
+  <li><strong>Alcohol timing:</strong> Every drink needs ~1 hour to metabolize. For 10pm sleep, last drink by 6pm max for 1–2 drinks. Fewer nights per week matters more than perfect timing.</li>
+  <li><strong>Caffeine before noon:</strong> You're already doing this. Keep it.</li>
+  <li><strong>Temperature:</strong> Cool room (65–68°F / 18–20°C). Core body temp drop is a parasympathetic sleep trigger.</li>
+  <li><strong>Consistent wake time:</strong> More important than consistent bedtime. Anchors your circadian rhythm.</li>
+</ul>
+
+<h3 id="sleep-onset-protocol">Sleep Onset Protocol</h3>
+<ol>
+  <li>Extended exhale breathing (4 in, 6–8 out) for 5 minutes in bed</li>
+  <li>Magnesium glycinate 200–400mg, 30–60 minutes before bed</li>
+  <li>No screens 30 min before (or at minimum, night shift / reduced brightness)</li>
+  <li>If mind is racing: write it down. Externalizing the thought loop breaks the sympathetic cycle.</li>
+</ol>
+
+<h3 id="deep-sleep-support">Deep Sleep Support (Nutritional)</h3>
+<ul>
+  <li><strong>Magnesium glycinate</strong> — supports GABA (your brain's brake pedal)</li>
+  <li><strong>Tart cherry juice</strong> — natural melatonin source, also anti-inflammatory</li>
+  <li><strong>Kiwi</strong> — two kiwis before bed improved sleep onset and duration in clinical trials</li>
+  <li><strong>Your existing foods:</strong> walnuts contain melatonin, cacao supports magnesium (but eat earlier — it's mildly stimulating)</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="food-as-nervous-system-medicine">3. Food as Nervous System Medicine</h2>
+
+<p><em>You already have most of this. Here's the parasympathetic lens on your existing system.</em></p>
+
+<h3 id="what-you-have-working">What You Have Working</h3>
+
+<table>
+  <thead>
+    <tr><th>Food</th><th>Parasympathetic Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Walnuts</td><td>Melatonin + omega-3 (ALA) for nerve membrane</td></tr>
+    <tr><td>Eggs</td><td>Choline → acetylcholine (vagal neurotransmitter)</td></tr>
+    <tr><td>Spinach</td><td>Folate for myelin + magnesium</td></tr>
+    <tr><td>Pumpkin seeds</td><td>Highest food source of magnesium</td></tr>
+    <tr><td>Raw cacao</td><td>Magnesium + BDNF support</td></tr>
+    <tr><td>Blueberries</td><td>Neuroprotective, reduces neuroinflammation</td></tr>
+    <tr><td>Olive oil</td><td>Anti-neuroinflammatory (oleocanthal)</td></tr>
+    <tr><td>Brazil nuts</td><td>Selenium protects neural tissue from oxidative stress</td></tr>
+    <tr><td>Sweet potato</td><td>B6 for GABA and serotonin synthesis</td></tr>
+    <tr><td>Broccoli</td><td>Sulforaphane supports gut-brain barrier</td></tr>
+    <tr><td>Fermented foods</td><td>Gut bacteria produce neurotransmitters via vagus nerve</td></tr>
+  </tbody>
+</table>
+
+<h3 id="the-gaps-to-fill">The Gaps to Fill</h3>
+
+<table>
+  <thead>
+    <tr><th>Addition</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Omega-3 DHA (salmon, sardines, or algae supplement)</td>
+      <td>Your nerve cell membranes are literally made of DHA. Walnuts provide ALA but conversion is &lt;5%. This is the single biggest nutritional gap for nervous system support.</td>
+    </tr>
+    <tr>
+      <td>Magnesium glycinate supplement</td>
+      <td>Food sources may not be enough given your current sympathetic load. 200–400mg before bed. Glycinate form crosses blood-brain barrier and supports GABA.</td>
+    </tr>
+    <tr>
+      <td>Tart cherry juice</td>
+      <td>Natural melatonin, anti-inflammatory, supports sleep onset. Small glass in the evening.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="gut-brain-axis">Gut-Brain Axis</h3>
+<ul>
+  <li>90% of serotonin is produced in the gut</li>
+  <li>Vagus nerve carries signals directly from gut microbiome to brain</li>
+  <li>Your microbiome food system IS nervous system work</li>
+  <li>Sauerkraut/kimchi addition matters here — diverse gut bacteria = more neurotransmitter precursors</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="movement">4. Movement — The Right Kind</h2>
+
+<p>Not all exercise is parasympathetic. High-intensity training is sympathetic. If your baseline is already running hot, adding more stress isn't recovery.</p>
+
+<h3>Parasympathetic Movement</h3>
+<ul>
+  <li><strong>Walking</strong> — especially in nature. 20–30 minutes. The combination of gentle rhythmic movement + natural environment is deeply vagal.</li>
+  <li><strong>Yoga</strong> — specifically slow, breath-linked styles (yin, restorative). Not power yoga.</li>
+  <li><strong>Stretching / mobility</strong> — long holds (60+ seconds) with slow breathing activate parasympathetic response.</li>
+  <li><strong>Swimming</strong> — face-in-water triggers dive reflex. Rhythmic breathing. Full-body low-impact.</li>
+</ul>
+
+<h3>When to Train Hard</h3>
+<ul>
+  <li>Only when HRV is above your baseline</li>
+  <li>Morning is better than evening for sympathetic exercise</li>
+  <li>If HRV is low, walk instead. This isn't weakness — it's intelligent load management.</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="environment-and-lifestyle">5. Environment and Lifestyle</h2>
+
+<h3>What Raises Baseline Sympathetic Tone</h3>
+<ul>
+  <li>Commute stress (your data shows this clearly)</li>
+  <li>Screen time and constant notifications</li>
+  <li>Unfinished task load (open loops in your mind)</li>
+  <li>Poor air quality, noise pollution</li>
+  <li>Social conflict or isolation</li>
+  <li>Alcohol — even moderate use suppresses parasympathetic recovery during sleep</li>
+</ul>
+
+<h3>What Lowers It</h3>
+<ul>
+  <li><strong>Nature exposure</strong> — 20 minutes in green space measurably drops cortisol</li>
+  <li><strong>Sunlight in the first hour of waking</strong> — sets circadian rhythm, supports evening melatonin</li>
+  <li><strong>Social connection</strong> — genuine, not performative. Co-regulation is real.</li>
+  <li><strong>Work-from-home days</strong> — your Tuesday HRV spike says everything</li>
+  <li><strong>Reducing decision fatigue</strong> — routines, meal prep, simplifying choices</li>
+  <li><strong>Music at 60 BPM</strong> — entrains heart rate downward. Ambient, classical, lo-fi.</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="daily-protocol">6. Daily Protocol (Minimum Viable)</h2>
+
+<h3>Morning</h3>
+<ul>
+  <li>Sunlight within first hour</li>
+  <li>Slow nasal breathing: 5 minutes (5.5 sec in, 5.5 sec out)</li>
+  <li>Breakfast from your food system (oats + cacao + blueberries + nuts)</li>
+</ul>
+
+<h3>Midday</h3>
+<ul>
+  <li>Last caffeine before noon</li>
+  <li>Walk if possible, even 10 minutes</li>
+  <li>Physiological sigh between tasks (one cycle, takes 10 seconds)</li>
+</ul>
+
+<h3>Evening</h3>
+<ul>
+  <li>Last food 2–3 hours before bed</li>
+  <li>Alcohol: if at all, finish by 6pm, limit to 1–2</li>
+  <li>Magnesium glycinate 200–400mg</li>
+  <li>Extended exhale breathing in bed</li>
+</ul>
+
+<h3>Throughout</h3>
+<ul>
+  <li>Notice tension → physiological sigh</li>
+  <li>Cold water on face if acutely stressed</li>
+  <li>Prioritize work-from-home days where possible</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="tracking-progress">7. Tracking Progress</h2>
+
+<h3>What to Watch on Apple Watch</h3>
+<ul>
+  <li>Weekly HRV trend (not daily — too noisy)</li>
+  <li>Resting heart rate trend (should decrease as parasympathetic tone improves)</li>
+  <li>Sleep stage distribution (deep sleep % should increase)</li>
+  <li>Wake episodes per night (should decrease)</li>
+</ul>
+
+<h3>Realistic Timeline</h3>
+<ul>
+  <li>Breathing practice: shifts within days</li>
+  <li>Sleep architecture: 1–2 weeks to see changes (if alcohol and magnesium are addressed)</li>
+  <li>Baseline HRV: 4–6 weeks for sustained change</li>
+  <li>Full nervous system recalibration: 2–3 months</li>
+</ul>
+
+<div class="scene-break"></div>
+
+<h2 id="the-deeper-frame">The Deeper Frame</h2>
+
+<p>The sympathetic nervous system is about becoming — anticipating, planning, defending against the future. The parasympathetic is about being — resting in what's already here. Every practice above is fundamentally about creating conditions for the nervous system to stop bracing and settle into the present.</p>
+
+<p>Your Tuesday wasn't an anomaly. It was your system showing you its natural state when you stop overriding it.</p>
+
+<p>The stillness beneath motion isn't something you achieve. It's what remains when the noise quiets down. These practices don't create peace — they remove what's obscuring it.</p>
+
+  </article>
+</main>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const drawerClose = document.getElementById('drawerClose');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+function openNav() {
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeNav() {
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+menuBtn.addEventListener('click', openNav);
+drawerClose.addEventListener('click', closeNav);
+overlay.addEventListener('click', closeNav);
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+const bar = document.querySelector('.progress-bar');
+if (bar) {
+  function upd() {
+    const s = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = s > 0 ? (window.scrollY / s * 100) + '%' : '0%';
+  }
+  window.addEventListener('scroll', upd, { passive: true });
+  upd();
+}
+</script>
+</body>
+</html>
