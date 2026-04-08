@@ -211,6 +211,10 @@ def nav_html(root, cur):
     parts += [
         "</div>",
         '<div class="nav-sec">',
+        '<div class="nav-label">Exploration</div>',
+        link("the-simulation-protocol.html", "The Simulation Protocol"),
+        "</div>",
+        '<div class="nav-sec">',
         '<div class="nav-label">Reference</div>',
         link("voice.html", "Voice &amp; Style"),
         link("changelog.html", "Changelog"),
@@ -616,6 +620,11 @@ def gen_index():
         '<div class="card-title">The Demiurge Protocol</div>'
         '<div class="card-sub">Philosophical companion</div></a>'
     )
+    cards_wip = (
+        '<a href="the-simulation-protocol.html" class="card">'
+        '<div class="card-title">The Simulation Protocol</div>'
+        '<div class="card-sub">Seed document &mdash; WIP</div></a>'
+    )
     cards_ch = "".join(
         f'<a href="chapters/{slug}.html" class="card">'
         f'<div class="card-title">Ch {num}: {title}</div>'
@@ -641,6 +650,8 @@ def gen_index():
 <div class="card-grid">{cards_world}</div>
 <span class="sec-label">The Winding Shift</span>
 <div class="card-grid">{cards_ch}</div>
+<span class="sec-label">Exploration</span>
+<div class="card-grid">{cards_wip}</div>
 <span class="sec-label">Reference</span>
 <div class="card-grid">{cards_ref}</div>"""
     return page_tmpl("Home", "Gearpunk", "style.css", "", "index.html", body)
@@ -764,12 +775,17 @@ def main():
     w(OUT / "voice.html",
       gen_doc(GEARPUNK / "the-winding-shift" / "VOICE.md", "Voice & Style Guide", "Voice", "voice.html"),
       "voice.html")
+    w(OUT / "the-simulation-protocol.html",
+      gen_doc(GEARPUNK / "wip" / "the-simulation-protocol.md",
+              "The Simulation Protocol", "Simulation Protocol",
+              "the-simulation-protocol.html"),
+      "the-simulation-protocol.html")
     w(OUT / "changelog.html", gen_changelog(), "changelog.html")
 
     for slug, title, num in CHAPTERS:
         w(OUT / "chapters" / f"{slug}.html", gen_chapter(slug, title, num), f"chapters/{slug}.html")
 
-    print(f"\nDone: {6 + len(CHAPTERS)} files -> {OUT}")
+    print(f"\nDone: {7 + len(CHAPTERS)} files -> {OUT}")
 
 
 if __name__ == "__main__":
